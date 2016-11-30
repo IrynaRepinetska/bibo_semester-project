@@ -1,0 +1,7 @@
+installation exlibris-primo for ruby
+1.install ruby
+2.gem install exlibris-primo
+
+installation aiml for python2.7
+1.install python2.7
+2.pip install aiml

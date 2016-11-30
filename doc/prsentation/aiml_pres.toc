@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Einleitung}{2}{0}{1}
+\beamer@sectionintoc {2}{Artificial Intelligence Markup Language}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{Allgemeines}{3}{0}{2}
+\beamer@sectionintoc {3}{Tags}{4}{0}{3}
+\beamer@subsectionintoc {3}{1}{Basic Tags}{4}{0}{3}
+\beamer@sectionintoc {4}{Zusammenfassung}{15}{0}{4}

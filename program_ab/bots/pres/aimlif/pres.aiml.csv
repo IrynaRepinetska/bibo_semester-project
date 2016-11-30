@@ -1,0 +1,22 @@
+0,HELLO,*,*,Hello User,pres.aiml
+
+0,HELLO *,*,*,<srai>HELLO</srai>,pres.aiml
+
+0,I'M * FROM *,*,*,<star index="2"/> is a nice region... But <star index="1"/> is a shit name though.,pres.aiml
+
+0,I'M * FROM *,*,*,<star index="2"/> is a nice region... But <set name="user"><star index="1"/></set> is a shit name though.,pres.aiml
+
+0,HELLO,*,*, <random><li> Hello! </li><li> Hi! Nice to meet you! </li></random>,pres.aiml
+
+0,WHAT ABOUT MOVIES,*,*,Do you like comedy movies,that.aiml
+0,YES,Do you like comedy movies,*,Nice! I like comedy movies too.,that.aiml
+0,NO,Do you like comedy movies,*,Ok! But I like comedy movies.,that.aiml
+
+0,LETS DISCUSS MOVIES,*,*,Yes <set name = "topic">movies</set>,pres.aiml
+0,*,*,movies,Watching good movie refreshes our minds.,pres.aiml
+0,I LIKE WATCHING COMEDY,*,movies,I like comedy movies too.,pres.aiml
+0,STOP TALKING ABOUT MOVIES,*,movies,OK <think><set name= "topic"></set></think>,pres.aiml
+
+0,HOW ARE YOU,*,*,<random><li><think><set name = "state"> happy</set></think></li><li><think><set name = "state"> sad</set></think></li></random><condition name = "state" value = "happy">I am happy!</condition><condition name = "state" value = "sad">I am sad!</condition>,pres.aiml
+
+0,BYE,*,*,Bye Bye <get name="user"/> Have a good presentation!,pres.aiml

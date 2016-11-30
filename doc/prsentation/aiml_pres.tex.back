@@ -1,0 +1,298 @@
+\documentclass[9pt]{beamer}
+
+\usepackage{amsmath,amsthm,amssymb} %fuer math. Formeln
+\usepackage{graphicx} %fuer Bilder
+\usepackage{color} %fuer farbigen Text
+\usepackage{listings}
+\lstset{
+  language=XML,
+	backgroundcolor = \color{lightgray},
+  basicstyle=\tiny,
+columns=fullflexible
+}
+
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{00A0}{ }
+
+\usetheme{Berlin}  % Vorlage, welche das Aussehen der Praesentation festlegt-andere Alternativen: AnnArbor, Bergen,...
+\usecolortheme{orchid} % Vorlage, welche das Farblayout der Praesentation festlegt -andere Alternativen: lily, beetle,...
+\author{Iryna Repinetska, Chris Roeseler}
+\title{AIML - Artificial Intelligence Markup Language}
+\institute{Institut f\"ur Informatik Humboldt-Universit\"at zu Berlin}
+\date{\today} 
+
+
+
+\begin{document}
+
+
+\begin{frame}% Beginne eine Slide 
+  \titlepage % Inhalt (In diesem Fall die Titelseite)
+\end{frame} % Beende eine Slide
+
+\section{Tags} 
+\subsection{Basic Tags}
+\begin{frame}[fragile]
+  \frametitle{\textless aiml\textgreater}
+\begin{itemize}
+  \item Markiert Anfang und Ende des AIML Dokuments\\
+  \item Optional Angabe von Version und Kodierung\\
+  \item Vergleichbar mit \textless html\textgreater\textless /html\textgreater\\
+\end{itemize}
+  \begin{lstlisting}
+ <aiml version="1.0.1" encoding="UTF-8"?> 
+ <category> 
+    <pattern> HELLO </pattern> 
+    <template>  
+       Hello User
+    </template> 
+ </category> 
+ </aiml> 
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless category\textgreater}  % Ueberschrift einer Seite
+\begin{itemize}
+  \item Genannt knowledge unit\\
+  \item Enthält:\ \
+\begin{itemize}
+    \item Möglichen Anfrage String(\textless pattern\textgreater)\\
+    \item Antwort/en des Bots(\textless template\textgreater)\\
+    \item Optional: Kontext(\textless topic\textgreater)\\
+  \end{itemize}
+  \end{itemize}
+  \begin{lstlisting}
+ <aiml version="1.0.1" encoding="UTF-8"?> 
+ <category> 
+    <pattern> HELLO </pattern> 
+    <template> 
+       Hello User 
+    </template> 
+ </category> 
+ </aiml> 
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless pattern\textgreater}  % Ueberschrift einer Seite
+\begin{itemize}
+  \item Matched den user input\\
+  \item Kann wildcard character enthalten\\
+  \item case insensitiv\\
+  \end{itemize}
+  \begin{lstlisting}
+ <aiml version="1.0.1" encoding="UTF-8"?> 
+ <category> 
+    <pattern> HELLO </pattern> 
+    <template>  
+       Hello User
+    </template> 
+ </category> 
+ </aiml> 
+  \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{\textless template\textgreater}
+\begin{itemize}
+  \item Antwort des Bots\\
+  \item Informationen speichern für spätere Gespräche\\
+  \item Programme aufrufen\\
+  \item Weiterführende Fragen stellen\\
+  \end{itemize}
+  \begin{lstlisting}
+ <aiml version="1.0.1" encoding="UTF-8"?> 
+ <category> 
+    <pattern> HELLO </pattern> 
+    <template>  
+       Hello User
+    </template> 
+ </category> 
+ </aiml> 
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless star\textgreater}
+\begin{itemize}
+  \item Korrespondiert mit wildcard character\\
+  \item Indizierung aus pattern möglich
+  \end{itemize}
+
+  \begin{lstlisting}
+  <category>
+    <pattern> I AM * FROM * </pattern>
+
+    <template>
+      <star index=``2''/> is a nice region... <star index=``1''/> is a shit name though.
+    </template>
+
+  </category>
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless srai\textgreater}
+\begin{itemize}
+\item Matched ein \textless pattern\textgreater und stellt die Anfrage geändert neu
+
+\item Divide and Conquer - Beispiel Bot
+
+\item Symbolic Reduction - Pattern vereinfachen
+
+\item Synonyms resolution
+
+\item Keywords detection
+\end{itemize}
+  \begin{lstlisting}
+ <category> 
+    <pattern> HELLO </pattern> 
+    <template>  
+       Hello User
+    </template> 
+ </category> 
+  \end{lstlisting}
+  \begin{lstlisting}
+   <category>
+     <pattern> HELLO *</pattern>
+
+     <template>
+       <srai>HELLO</srai>
+     </template>
+   </category>
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless random\textgreater}
+\begin{itemize}
+\item verschiedene Antwortmöglichkeiten die zufällig ausgegeben werden\\
+  \end{itemize}
+\begin{lstlisting}
+
+   <category>
+      <pattern>HELLO</pattern>
+      <template>
+         <random>
+            <li> Hello! </li>
+            <li> Hi! Nice to meet you! </li>
+         </random>
+      </template>
+   <category>
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless that\textgreater}
+\begin{itemize}
+  \item Kontext Antworten\\
+  \item \textless that\textgreater : zuletzt ausgegebenes template\\
+  \item Zusätzliche notwendige Bedingung beim matching\\
+  \end{itemize}
+\begin{lstlisting}
+   <category>
+      <pattern>WHAT ABOUT MOVIES</pattern>
+      <template>Do you like comedy movies</template>  
+   </category>
+   
+   <category>
+      <pattern>YES</pattern>
+      <that>Do you like comedy movies</that>
+      <template>Nice, I like comedy movies too.</template>
+   </category>
+   
+   <category>
+      <pattern>NO</pattern>
+      <that>Do you like comedy movies</that>
+      <template>Ok! But I like comedy movies.</template>
+   </category> 
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless set\textgreater\textless get\textgreater\textless think\textgreater}
+\begin{itemize}
+  \item Speichern von Variablen z.B. Name\\
+  \end{itemize}
+  \begin{lstlisting}
+   <category>
+      <pattern>I am *</pattern>
+      <template>
+         Hello <set name = "username"> <star/>! </set>
+      </template>  
+   </category>  
+   
+   <category>
+      <pattern>Good Night</pattern>
+      <template>
+         By <get name = "username"/> Thanks for the conversation!
+      </template>  
+   </category>  
+\end{lstlisting}
+\begin{itemize}
+\item think speichert im Hintergrund
+\end{itemize}
+  \begin{lstlisting}
+      <template>
+         Hello <think><set name = "username"> <star/>! </set></think>
+      </template>
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless topic\textgreater}
+\begin{itemize}
+  \item Definiert catergory's die nur bei gesetztem topic matchen
+\end{itemize}
+\begin{lstlisting}
+   <category>
+      <pattern>LET DISCUSS MOVIES</pattern>
+      <template>Yes <set name = "topic">movies</set></template>  
+   </category>
+   
+   <topic name = "movies">
+      <category>
+         <pattern> * </pattern>
+         <template>Watching good movie refreshes our minds.</template>
+      </category>
+      
+      <category>
+         <pattern> I LIKE WATCHING COMEDY! </pattern>
+         <template>I like comedy movies too.</template>
+      </category>
+      
+   </topic>
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\textless condition\textgreater}
+\begin{itemize}
+\item Ähnlich zu break
+\item Bedingte Antworten im template
+    \end{itemize}
+      \begin{lstlisting}
+      <category>  
+        <pattern> HOW ARE YOU? </pattern>  
+        <template>  
+         <random>                                                                                           
+           <li><think><set name = ``state''> happy</set></think></li>                           
+           <li><think><set name = ``state''> sad  </set></think></li>                             
+         </random>
+       <condition name="state" value="happy">
+         I am happy.
+       </condition>
+       <condition name="state" value="sad">
+         I am sad.
+       </condition>
+    </template>
+  </category>
+	\end{lstlisting}
+\end{frame}
+
+\end{document}
+

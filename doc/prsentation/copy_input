@@ -1,0 +1,75 @@
+\begin{frame}
+
+
+\section{Einleitung}
+\begin{itemize}
+\item Die kognitiven Schnittstellen als die neue Form des Zusammenspiels zwischen Menschen und Maschienen.
+\item Ein Beispiel von solchen kognitiven Oberflächen sind Chatbots oder Programme, die ein Dialog mit Menschen simulieren sollen.
+\item Artificial Intelligence Markup Language (AIML) wurde in Jahren von 1995 bis 2000  by Richard Wallace entwickelt und ist heuzutage am meisten benutzte Sprache für die Entwicklung von Chatbots.
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+\section{Artificial Intelligence Markup Language}
+\subsection{Allgemeines}
+\begin{itemize}
+\item Artificial Intelligence Markup Language basiert auf den Konzepten der Mustererkennung.
+\item  AIML ist eine XML-basierte sowie tag-basierte Markup Sprache.
+\item Die Allgemeine Form eines AIML Objekte hat die folgede Struktur:
+$$<Befehl> ParameterListe </Befehl>$$.
+\item Die grundlegende Einheiten des Dialoges werden Kategorien (categories) gennant und bilden die Wissensbasis des Chatbots.
+\item Das AIML-Vokabular besteht aus Wörtern, Leerzeichen und den Sonderzeichen $\**$ und $\_$ .
+\end{itemize}
+
+
+
+\end{frame}
+\begin{frame}
+
+
+\section{Zusmmenfassung}
+Die AIML ist heuzutage die am weit verbreitete Programmiersprache für die Entwicklung von Chatbots. Diese Verbreitung beruht auf folgenden Gründen:
+\begin{itemize}
+\item AIML ist durch eine einfache Anwendung gekennzeichnet. Denn sie auf der XML (eXtensible Markup Language) basiert und die Implentation von Dialogen ist unter Verwendung von Tags einfacher;
+\item es gibt verschiedene AIML-Editors sowie Entwicklungsplattforme, die den Chatbot-Entwicklern bei der Codeerstellung sowie Web-Bereitstellung des Chatbots helfen;
+\item Der wesentliche Teil aller Chatbot-Projekte, die mit der AIML implementiert wurden, sind Open Source Software. Das gibt die Möglichkeit, Source Code sowie die entsprechende Dokumentation für die neuen Projekte zu benutzen.
+\end{itemize}
+
+\end{frame}
+
+\section{Erster Abschnitt} 
+\subsection{Unterabschnitt}
+\begin{frame}% Beginne eine Slide 
+  \frametitle{Seitentitel}  % Ueberschrift einer Seite
+  Der Inhalt eines Frames kann wie gewohnt mit Latex erstellt werden.
+  Dabei empfiehlt es sich
+  \begin{itemize}
+      \item  Aufz\"ahlungen und Listen,
+      \item  \textcolor{red}{verschiedene} \textcolor{green}{Farben}
+    \pause \item  und Pausen benutzen.
+  \end{itemize} 
+\end{frame}%Beende eine Slide
+
+\subsection{Bl\"ocke und Graphiken}
+\begin{frame}
+  \frametitle{Bl\"ocke und Graphiken}
+  Zum Hervorheben mathematischer Resultate k\"onnen Blocke benutzt werden:
+  \begin{block}{Titel des Blocks}
+    Inhalt eines Blocks
+  \end{block}
+  \begin{exampleblock}{Titel eines Beispiel-Blocks}
+    Inhalt eines Beispiel-Blocks
+  \end{exampleblock}
+  \pause
+  \begin{alertblock}{Titel eines Warn-Blocks}
+    Inhalt des Warn-Blocks
+  \end{alertblock}
+
+  \begin{block}{Satz des Pythagoras}
+    Seien $a, b$ und $c$ die  L\"angen der Seiten eines rechtwinkligen Dreiecks mit $c$ als L\"ange der Hypotenuse, so folgt:
+    \begin{equation*}
+      a^2 + b^2= c^2.
+    \end{equation*}
+  \end{block}
+\end{frame}
+

@@ -1,0 +1,22 @@
+\frametitle{\textless condition\textgreater}
+\begin{itemize}
+\item Ähnlich zu break
+\item Bedingte Antworten im template
+    \end{itemize}
+      \begin{lstlisting}
+      <category>
+        <pattern> HOW ARE YOU? </pattern>
+        <template>
+         <random>
+           <li><think><set name = ``state''> happy</set></think></li>
+           <li><think><set name = ``state''> sad  </set></think></li>
+         </random>
+       <condition name="state" value="happy">
+         I am happy.
+       </condition>
+       <condition name="state" value="sad">
+         I am sad.
+       </condition>
+    </template>
+  </category>
+	\end{lstlisting}
