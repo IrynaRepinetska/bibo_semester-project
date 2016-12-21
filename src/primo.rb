@@ -2,7 +2,7 @@ require 'exlibris-primo'
 search = Exlibris::Primo::Search.new(:base_url => "http://www.aub.aau.dk/primo/", :institution => "AUB", :page_size => "20")
 search.add_query_term "xml", "title", "exact"
 p search
-#count = search.size #=> 20+ (assuming there are 20+ records with this isbn)
+count = search.size #=> 20+ (assuming there are 20+ records with this isbn)
 #p count
 #facets = search.facets #=> Array of Primo facets
 #records = search.records #=> Array of Primo records
