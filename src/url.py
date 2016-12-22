@@ -2,61 +2,75 @@ from urllib.request import urlopen
 from urllib.parse import urlparse, urlunparse, urljoin, parse_qsl, urlencode
 from bs4 import BeautifulSoup as Bsoup
 
-#TODO didn't help for now
-def encoded_dict(in_dict):
-    out_dict = {}
-    for k, v in in_dict.items():
-        if isinstance(v, str):
-            v = v.encode('utf8')
-        elif isinstance(v, bytes):
-            # Must be encoded in UTF-8
-            v.decode('utf8')
-        out_dict[k] = v
-    return out_dict
+def build_keyword(opt, field):
+    """
+    Function checks if opt contains exact or contain to decide which opt belongs to which
+    code. Then Builds the string and retuns a url equivalent of search query for one word
+    """
+    #TODO Try clause not working
+    search = '&vl(freeText' + field  + ')=' + opt[0]
+    try:
+        if len(opt)==3:
+            if opt[1] == 'exact' or opt[1] == 'contains':
+                search = '&vl(1UI0)=' + opt[1] + search
+                search = '&vl(123424466UI0)=' + opt[2] + search
+            else:
+                search = '&vl(1UI0)=' + opt[2] + search
+                search = '&vl(123424466UI0)=' + opt[1] + search
 
+        elif len(opt)==2:
+            if opt[1] == 'exact' or opt[1] == 'contains':
+                search = '&vl(123424466UI0)=any' + '&vl(1UI0)=' + opt[1] + search
+            else:
+                search = '&vl(123424466UI0)=' + opt[1] + '&vl(1UI0)=contains' + search
+        else:
+            search = '&vl(123424466UI0)=any&vl(1UI0)=contains' + search
+    except (TypeError):
+        print('No valid option!')
+    return search
 
-"""playing with url's"""
-#body ="&vl%28freeText0%29=" + pattern +"&fn=search"
-#minimal search url wit search of xml
-min_search = "http://primo.kobv.de/primo_library/libweb/action/search.do?&vl%28freeText0%29=xml&fn=search&mode=Basic&vid=hub_ub"
-#encode url from base url and parameters
-#TODO unicode problems % gets encode to %25
-#pattern = [str(x) for x in input('Search Pattern').split()]
-pattern = input("Insert Search Pattern. But just one...for now")
-#TODO put extra parameters in dict fn modeand vid have to be there!!!
-#TODO change dicht to list for multiple keys
-params = {'fn':'search','mode':'Basic','vid':'hub_ub'}#,'vl%28freeText0%29':'xml'}
-params['vl%28freeText0%29'] = pattern
+def build_url(base, tail , term1, term2=None, term3=None, time=None, material=None, lang=None):
+    """
+    Builds the whole search url
+    Usage:Base URL of Primo libary
+    term[1-3]: A List containing at least the searchword
+    time, material, lang: Valid opt from Primo as string (to be included)
+    !Every opt thats not used has to be called with False!
+    """
+    url = base + build_keyword(term1, '0')
+    if term3:
+        url = url + build_keyword(term2, '1') + build_keyword(term3, '2')
+    elif term2:
+        url = url + build_keyword(term2, '1')
+    if time:
+        url = url + '&vl(123424475UI6)=' + time
+    if material:
+        url = url + '&vl(123424476UI6)=' + material
+    if lang:
+        url = url + '&vl(123424477UI6)=' + lang
+    return url + tail
 
-base ='http://primo.kobv.de/primo_library/libweb/action/search.do?'
-url = list(urlparse(base))
-query = dict(parse_qsl(url[4]))
-query.update(params)
-url[4] = urlencode(query)
-url = urlunparse(url)
-
-#TODO temporary fix for unicode Problem
-url=url.replace('%25','%')
-print(url)
+base ='http://primo.kobv.de/primo_library/libweb/action/search.do?tab=default_tab'
+tail ='&Submit=&fn=search&ct=search&mode=Advanced&vid=hub_ub&indx=1&dum=true&srt=rank&initialSearch=true'
+"""print(build_url(base,tail,['xml']))
+print(build_url(base,tail,['xml'],['html']))
+print(build_url(base,tail,['xml'],['html'],['zucker']))
+print(build_url(base,tail,['xml'],False,False,'20-YEAR'))
+print(build_url(base,tail,['xml'],False,False,False,'maps'))
+print(build_url(base,tail,['xml'],False,False,False,False,'ger'))
+"""
 
 """playing with html"""
-html = urlopen(min_search)
-#every element(book) contains in a tr element wit id "exlidResult[0..9]"
+pattern =[x for x in input('Three comma seperated keywords: ').split(',')]
+#html = urlopen(build_url(base,tail,pattern))
+#soup = Bsoup(html, 'lxml')
+print(build_url(base,tail,pattern))
+
+"""#every element(book) contains in a tr element wit id "exlidResult[0..9]"
 tr = "exlidResult"
 #parse html
-soup = Bsoup(html, 'lxml')
 #print all tr elements
 #print(soup.find_all('tr'))
-
-
-
-
-
-
-
-
-"""
 x = html.read()
 x = str(x).replace("\\n","").replace("\\t","").replace("\\r","")
-print(x)
-"""
+print(x)"""

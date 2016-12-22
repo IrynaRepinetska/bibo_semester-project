@@ -1,0 +1,614 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://primo-fe1.library.nd.edu:1701/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo-fe1.library.nd.edu:1701/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:searchBrief><request><![CDATA[<searchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator><QueryTerm><IndexField>any</IndexField><PrecisionOperator>contains</PrecisionOperator><Value>van
+        gogh</Value></QueryTerm></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled><Locations><uic:Location
+        type="adaptor" value="primo_central_multiple_fe"/></Locations></PrimoSearchRequest><institution>NDU</institution></searchRequest>]]></request></wsdl:searchBrief></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"searchBrief"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '1025'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 05 Jun 2014 16:49:32 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:searchBriefResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://primo-fe1.library.nd.edu:1701/PrimoWebServices/services/searcher\"><searchBriefReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;sear:SEGMENTS
+        xmlns:sear=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;&lt;sear:JAGROOT&gt;\n
+        \   &lt;sear:RESULT&gt;\n      &lt;sear:QUERYTRANSFORMS/&gt;\n      &lt;sear:FACETLIST
+        ACCURATE_COUNTERS=&quot;true&quot;&gt;\n        &lt;sear:FACET NAME=&quot;creator&quot;
+        COUNT=&quot;20&quot;&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Kooij,
+        E.S.&quot; VALUE=&quot;9&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Tian,
+        He&quot; VALUE=&quot;6&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Radepont,
+        Marie&quot; VALUE=&quot;7&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Russell,
+        John&quot; VALUE=&quot;103&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Kimmelman,
+        Michael&quot; VALUE=&quot;93&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Gogh,
+        Vincent Van&quot; VALUE=&quot;18&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Arnold, Wilfred Niels&quot; VALUE=&quot;15&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Koeman, N.J.&quot; VALUE=&quot;10&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Monico, Letizia&quot; VALUE=&quot;9&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Van Der Snickt, Geert&quot; VALUE=&quot;9&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Vogel, Carol&quot; VALUE=&quot;167&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Miliani, Costanza&quot; VALUE=&quot;7&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Hendriks, Ella&quot; VALUE=&quot;8&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Cotte, Marine&quot; VALUE=&quot;10&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Janssens, Koen&quot; VALUE=&quot;15&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Reif, Rita&quot; VALUE=&quot;80&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Griessen, R.&quot; VALUE=&quot;20&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Dik, Joris&quot; VALUE=&quot;9&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Soth, Lauren&quot; VALUE=&quot;9&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Bailey, Martin&quot; VALUE=&quot;29&quot;/&gt;\n        &lt;/sear:FACET&gt;\n
+        \       &lt;sear:FACET NAME=&quot;lang&quot; COUNT=&quot;20&quot;&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;cat&quot; VALUE=&quot;10&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;hun&quot; VALUE=&quot;1&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;ger&quot; VALUE=&quot;326&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;por&quot; VALUE=&quot;29&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;fre&quot; VALUE=&quot;199&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;heb&quot; VALUE=&quot;3&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;rum&quot; VALUE=&quot;2&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;swe&quot; VALUE=&quot;6&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;kor&quot; VALUE=&quot;20&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;und&quot; VALUE=&quot;8&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;nor&quot; VALUE=&quot;1&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;dan&quot; VALUE=&quot;2&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;rus&quot; VALUE=&quot;1&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;dut&quot; VALUE=&quot;59&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;ita&quot; VALUE=&quot;22&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;chi&quot; VALUE=&quot;118&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;pol&quot; VALUE=&quot;2&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;glg&quot; VALUE=&quot;2&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;eng&quot; VALUE=&quot;24612&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;spa&quot; VALUE=&quot;161&quot;/&gt;\n        &lt;/sear:FACET&gt;\n
+        \       &lt;sear:FACET NAME=&quot;rtype&quot; COUNT=&quot;14&quot;&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;books&quot; VALUE=&quot;108&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;reviews&quot; VALUE=&quot;3136&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;journals&quot; VALUE=&quot;2&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;articles&quot; VALUE=&quot;16253&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;other&quot; VALUE=&quot;4&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;text_resources&quot; VALUE=&quot;641&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;websites&quot; VALUE=&quot;21&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;newspaper_articles&quot; VALUE=&quot;14004&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;reference_entrys&quot; VALUE=&quot;301&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;research_datasets&quot; VALUE=&quot;30&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Dissertations&quot; VALUE=&quot;82&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;conference_proceedings&quot; VALUE=&quot;430&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;images&quot; VALUE=&quot;13&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;media&quot; VALUE=&quot;161&quot;/&gt;\n        &lt;/sear:FACET&gt;\n
+        \       &lt;sear:FACET NAME=&quot;topic&quot; COUNT=&quot;19&quot;&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Artists&quot; VALUE=&quot;712&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Art Exhibitions&quot; VALUE=&quot;474&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Dutch Painters&quot; VALUE=&quot;58&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Modern Art&quot; VALUE=&quot;209&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Bipolar Disorder&quot; VALUE=&quot;53&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Gogh, Vincent Van&quot; VALUE=&quot;123&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Famous Persons&quot; VALUE=&quot;100&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Museums&quot; VALUE=&quot;595&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Creativity&quot; VALUE=&quot;145&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Art Auctions&quot; VALUE=&quot;72&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Art Museums&quot; VALUE=&quot;393&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Art&quot; VALUE=&quot;547&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Painters (Artists)&quot; VALUE=&quot;624&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot; Van Gogh&quot; VALUE=&quot;82&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Art Thefts&quot; VALUE=&quot;119&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Epilepsy&quot; VALUE=&quot;56&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Mental Disorders&quot; VALUE=&quot;62&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Paintings&quot; VALUE=&quot;87&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Painting (Art)&quot; VALUE=&quot;556&quot;/&gt;\n        &lt;/sear:FACET&gt;\n
+        \       &lt;sear:FACET NAME=&quot;tlevel&quot; COUNT=&quot;2&quot;&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;online_resources&quot; VALUE=&quot;27696&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;peer_reviewed&quot; VALUE=&quot;8186&quot;/&gt;\n        &lt;/sear:FACET&gt;\n
+        \       &lt;sear:FACET NAME=&quot;pfilter&quot; COUNT=&quot;12&quot;&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;books&quot; VALUE=&quot;178&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;reviews&quot; VALUE=&quot;3136&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;reference_entrys&quot; VALUE=&quot;301&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;journals&quot; VALUE=&quot;2&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;articles&quot; VALUE=&quot;16633&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;research_datasets&quot; VALUE=&quot;30&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Dissertations&quot; VALUE=&quot;82&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;audio_video&quot; VALUE=&quot;161&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;images&quot; VALUE=&quot;13&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;conference_proceedings&quot; VALUE=&quot;430&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;websites&quot; VALUE=&quot;21&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;newspaper_articles&quot; VALUE=&quot;14004&quot;/&gt;\n
+        \       &lt;/sear:FACET&gt;\n        &lt;sear:FACET NAME=&quot;creationdate&quot;
+        COUNT=&quot;76&quot;&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2008&quot;
+        VALUE=&quot;1999&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2009&quot;
+        VALUE=&quot;1780&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2006&quot;
+        VALUE=&quot;2146&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2007&quot;
+        VALUE=&quot;2081&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2004&quot;
+        VALUE=&quot;2062&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2005&quot;
+        VALUE=&quot;2124&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2002&quot;
+        VALUE=&quot;1428&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2003&quot;
+        VALUE=&quot;1738&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1930&quot;
+        VALUE=&quot;72&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1970&quot;
+        VALUE=&quot;36&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1971&quot;
+        VALUE=&quot;41&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1972&quot;
+        VALUE=&quot;52&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1973&quot;
+        VALUE=&quot;38&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1974&quot;
+        VALUE=&quot;35&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1975&quot;
+        VALUE=&quot;44&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1976&quot;
+        VALUE=&quot;56&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1977&quot;
+        VALUE=&quot;52&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2012&quot;
+        VALUE=&quot;1650&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1978&quot;
+        VALUE=&quot;43&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2011&quot;
+        VALUE=&quot;1478&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1979&quot;
+        VALUE=&quot;54&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2010&quot;
+        VALUE=&quot;2328&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2013&quot;
+        VALUE=&quot;993&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2014&quot;
+        VALUE=&quot;590&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1900&quot;
+        VALUE=&quot;13&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1990&quot;
+        VALUE=&quot;600&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1940&quot;
+        VALUE=&quot;136&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;500&quot;
+        VALUE=&quot;1&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1982&quot;
+        VALUE=&quot;57&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1983&quot;
+        VALUE=&quot;98&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1&quot;
+        VALUE=&quot;8&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1980&quot;
+        VALUE=&quot;66&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1981&quot;
+        VALUE=&quot;83&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1986&quot;
+        VALUE=&quot;222&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1987&quot;
+        VALUE=&quot;349&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1984&quot;
+        VALUE=&quot;129&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1985&quot;
+        VALUE=&quot;224&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1988&quot;
+        VALUE=&quot;297&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1989&quot;
+        VALUE=&quot;290&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1910&quot;
+        VALUE=&quot;4&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1600&quot;
+        VALUE=&quot;4&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1959&quot;
+        VALUE=&quot;20&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1958&quot;
+        VALUE=&quot;23&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1957&quot;
+        VALUE=&quot;29&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1956&quot;
+        VALUE=&quot;32&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1955&quot;
+        VALUE=&quot;20&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1954&quot;
+        VALUE=&quot;18&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1953&quot;
+        VALUE=&quot;31&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1952&quot;
+        VALUE=&quot;21&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1951&quot;
+        VALUE=&quot;20&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1950&quot;
+        VALUE=&quot;157&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1995&quot;
+        VALUE=&quot;466&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1996&quot;
+        VALUE=&quot;512&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1997&quot;
+        VALUE=&quot;613&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1998&quot;
+        VALUE=&quot;964&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1991&quot;
+        VALUE=&quot;441&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1500&quot;
+        VALUE=&quot;6&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1992&quot;
+        VALUE=&quot;420&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1993&quot;
+        VALUE=&quot;452&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1994&quot;
+        VALUE=&quot;424&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1800&quot;
+        VALUE=&quot;4&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1700&quot;
+        VALUE=&quot;10&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1999&quot;
+        VALUE=&quot;1042&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1920&quot;
+        VALUE=&quot;18&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1967&quot;
+        VALUE=&quot;26&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1966&quot;
+        VALUE=&quot;33&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1969&quot;
+        VALUE=&quot;23&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1968&quot;
+        VALUE=&quot;32&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1963&quot;
+        VALUE=&quot;30&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1962&quot;
+        VALUE=&quot;31&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1965&quot;
+        VALUE=&quot;19&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1964&quot;
+        VALUE=&quot;37&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1961&quot;
+        VALUE=&quot;35&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;1960&quot;
+        VALUE=&quot;24&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2001&quot;
+        VALUE=&quot;1321&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;2000&quot;
+        VALUE=&quot;1246&quot;/&gt;\n        &lt;/sear:FACET&gt;\n        &lt;sear:FACET
+        NAME=&quot;domain&quot; COUNT=&quot;20&quot;&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Nature Publishing Group (CrossRef)&quot; VALUE=&quot;47&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Taylor &amp;amp; Francis Online
+        - Journals&quot; VALUE=&quot;2012&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Wiley Online Library&quot; VALUE=&quot;120&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;JSTOR&quot; VALUE=&quot;806&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;ERIC (U.S. Dept. of Education)&quot; VALUE=&quot;130&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Project MUSE&quot; VALUE=&quot;561&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Dialnet&quot; VALUE=&quot;19&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;SciVerse ScienceDirect (Elsevier)&quot;
+        VALUE=&quot;1650&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;American
+        Medical Association (CrossRef)&quot; VALUE=&quot;13&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Wolters Kluwer - Ovid - Lippincott Williams &amp;amp; Wilkins (CrossRef)&quot;
+        VALUE=&quot;15&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;SpringerLink&quot;
+        VALUE=&quot;413&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Britannica
+        Online Academic Edition&quot; VALUE=&quot;75&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;MEDLINE (NLM)&quot; VALUE=&quot;1087&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Informa - Taylor &amp;amp; Francis (CrossRef)&quot; VALUE=&quot;1671&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Directory of Open Access Journals
+        (DOAJ)&quot; VALUE=&quot;112&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;NDLTD
+        Union Catalog&quot; VALUE=&quot;66&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;American Chemical Society (CrossRef)&quot; VALUE=&quot;13&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;&#x7EF4;&#x666E;&#x8D44;&#x8BAF;
+        (Chongqing VIP Information Co.)&quot; VALUE=&quot;117&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;KISS (Korean studies Information Service System)&quot; VALUE=&quot;18&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;OneFile (GALE)&quot; VALUE=&quot;26192&quot;/&gt;\n
+        \       &lt;/sear:FACET&gt;\n        &lt;sear:FACET NAME=&quot;jtitle&quot;
+        COUNT=&quot;19&quot;&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;London
+        Evening Standard (London, England)&quot; VALUE=&quot;159&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Jama: The Journal Of The American Medical Association&quot; VALUE=&quot;14&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;PRWeb Newswire&quot; VALUE=&quot;131&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;ARTnews&quot; VALUE=&quot;60&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;The New York Times&quot; VALUE=&quot;2456&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Nature&quot; VALUE=&quot;29&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Quotations Book&quot; VALUE=&quot;21&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Burlington Magazine&quot; VALUE=&quot;92&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;The Times (London, England)&quot;
+        VALUE=&quot;201&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Asia
+        Africa Intelligence Wire&quot; VALUE=&quot;523&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Choice Reviews Online&quot; VALUE=&quot;38&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Time&quot; VALUE=&quot;415&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Newsweek&quot; VALUE=&quot;46&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Analytical Chemistry&quot; VALUE=&quot;12&quot;/&gt;\n          &lt;sear:FACET_VALUES
+        KEY=&quot;Sunday Times (London, England)&quot; VALUE=&quot;184&quot;/&gt;\n
+        \         &lt;sear:FACET_VALUES KEY=&quot;Nederlands Tijdschrift Voor Geneeskunde&quot;
+        VALUE=&quot;12&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Apollo&quot;
+        VALUE=&quot;174&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;School
+        Arts&quot; VALUE=&quot;124&quot;/&gt;\n          &lt;sear:FACET_VALUES KEY=&quot;Arts
+        &amp;amp; Activities&quot; VALUE=&quot;153&quot;/&gt;\n        &lt;/sear:FACET&gt;\n
+        \     &lt;/sear:FACETLIST&gt;\n      &lt;sear:DOCSET HIT_TIME=&quot;84&quot;
+        TOTALHITS=&quot;33912&quot; FIRSTHIT=&quot;1&quot; LASTHIT=&quot;5&quot; TOTAL_TIME=&quot;283&quot;&gt;\n
+        \       &lt;sear:DOC ID=&quot;245124465&quot; RANK=&quot;0.10000001&quot;
+        NO=&quot;1&quot; SEARCH_ENGINE=&quot;PrimoCentralThirdNode&quot; SEARCH_ENGINE_TYPE=&quot;Primo
+        Central Search Engine&quot; LOCAL=&quot;false&quot;&gt;\n          &lt;PrimoNMBib
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;10.5860/CHOICE.36-1963&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;crossref&lt;/sourceid&gt;\n                &lt;recordid&gt;TN_crossref10.5860/CHOICE.36-1963&lt;/recordid&gt;\n
+        \               &lt;sourceformat&gt;XML&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Other&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;article&lt;/type&gt;\n
+        \               &lt;title&gt;Van Gogh&lt;/title&gt;\n                &lt;ispartof&gt;Choice
+        Reviews Online, 1998, Vol.36(04), pp.36-1963-36-1963&lt;/ispartof&gt;\n                &lt;identifier&gt;&lt;![CDATA[&lt;b&gt;ISSN:&lt;/b&gt;
+        0009-4978 ; &lt;b&gt;E-ISSN:&lt;/b&gt; 1523-8253 ; &lt;b&gt;DOI:&lt;/b&gt;
+        http://dx.doi.org/10.5860/CHOICE.36-1963]]&gt;&lt;/identifier&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;source&gt;CrossRef&lt;/source&gt;\n                &lt;lds40&gt;19981201&lt;/lds40&gt;\n
+        \               &lt;lds41&gt;19981201&lt;/lds41&gt;\n                &lt;lds43&gt;19981201&lt;/lds43&gt;\n
+        \               &lt;lds45&gt;19981201&lt;/lds45&gt;\n                &lt;lds50&gt;peer_reviewed&lt;/lds50&gt;\n
+        \             &lt;/display&gt;\n              &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_article&lt;/openurl&gt;\n
+        \               &lt;openurlfulltext&gt;$$Topenurlfull_article&lt;/openurlfulltext&gt;\n
+        \               &lt;addlink&gt;$$Uhttps://exlibris-pub.s3.amazonaws.com/aboutCrossref.html$$DView
+        CrossRef copyright notice&lt;/addlink&gt;\n              &lt;/links&gt;\n
+        \             &lt;search&gt;\n                &lt;title&gt;Van Gogh&lt;/title&gt;\n
+        \               &lt;general&gt;English&lt;/general&gt;\n                &lt;general&gt;10.5860/CHOICE.36-1963&lt;/general&gt;\n
+        \               &lt;sourceid&gt;crossref&lt;/sourceid&gt;\n                &lt;recordid&gt;crossref10.5860/CHOICE.36-1963&lt;/recordid&gt;\n
+        \               &lt;issn&gt;0009-4978&lt;/issn&gt;\n                &lt;issn&gt;00094978&lt;/issn&gt;\n
+        \               &lt;issn&gt;1523-8253&lt;/issn&gt;\n                &lt;issn&gt;15238253&lt;/issn&gt;\n
+        \               &lt;rsrctype&gt;article&lt;/rsrctype&gt;\n                &lt;creationdate&gt;1998&lt;/creationdate&gt;\n
+        \               &lt;addtitle&gt;Choice Reviews Online&lt;/addtitle&gt;\n                &lt;searchscope&gt;crossref_rest&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;CrossRef&lt;/searchscope&gt;\n                &lt;searchscope&gt;Crossref&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;crossref&lt;/searchscope&gt;\n                &lt;scope&gt;crossref_rest&lt;/scope&gt;\n
+        \               &lt;scope&gt;CrossRef&lt;/scope&gt;\n                &lt;scope&gt;Crossref&lt;/scope&gt;\n
+        \               &lt;scope&gt;crossref&lt;/scope&gt;\n              &lt;/search&gt;\n
+        \             &lt;sort&gt;\n                &lt;title&gt;Van Gogh&lt;/title&gt;\n
+        \               &lt;creationdate&gt;19981201&lt;/creationdate&gt;\n              &lt;/sort&gt;\n
+        \             &lt;facets&gt;\n                &lt;frbrgroupid&gt;5418720077066216478&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;1998&lt;/creationdate&gt;\n                &lt;prefilter&gt;articles&lt;/prefilter&gt;\n
+        \               &lt;rsrctype&gt;articles&lt;/rsrctype&gt;\n                &lt;jtitle&gt;Choice
+        Reviews Online&lt;/jtitle&gt;\n                &lt;toplevel&gt;peer_reviewed&lt;/toplevel&gt;\n
+        \             &lt;/facets&gt;\n              &lt;frbr&gt;\n                &lt;t&gt;2&lt;/t&gt;\n
+        \               &lt;k1&gt;1998&lt;/k1&gt;\n                &lt;k2&gt;00094978&lt;/k2&gt;\n
+        \               &lt;k2&gt;15238253&lt;/k2&gt;\n                &lt;k3&gt;10.5860/CHOICE.36-1963&lt;/k3&gt;\n
+        \               &lt;k4&gt;36&lt;/k4&gt;\n                &lt;k5&gt;04&lt;/k5&gt;\n
+        \               &lt;k6&gt;36&lt;/k6&gt;\n                &lt;k7&gt;choice
+        reviews online&lt;/k7&gt;\n                &lt;k8&gt;van gogh&lt;/k8&gt;\n
+        \               &lt;k9&gt;vangogh&lt;/k9&gt;\n              &lt;/frbr&gt;\n
+        \             &lt;delivery&gt;\n                &lt;delcategory&gt;Remote
+        Search Resource&lt;/delcategory&gt;\n                &lt;fulltext&gt;fulltext&lt;/fulltext&gt;\n
+        \             &lt;/delivery&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n                &lt;pcg_type&gt;aggregator_crossref&lt;/pcg_type&gt;\n
+        \             &lt;/ranking&gt;\n              &lt;addata&gt;\n                &lt;atitle&gt;Van
+        Gogh&lt;/atitle&gt;\n                &lt;jtitle&gt;Choice Reviews Online&lt;/jtitle&gt;\n
+        \               &lt;date&gt;19981201&lt;/date&gt;\n                &lt;risdate&gt;19981201&lt;/risdate&gt;\n
+        \               &lt;volume&gt;36&lt;/volume&gt;\n                &lt;issue&gt;04&lt;/issue&gt;\n
+        \               &lt;spage&gt;36-1963&lt;/spage&gt;\n                &lt;epage&gt;36-1963&lt;/epage&gt;\n
+        \               &lt;pages&gt;36-1963-36-1963&lt;/pages&gt;\n                &lt;issn&gt;0009-4978&lt;/issn&gt;\n
+        \               &lt;eissn&gt;1523-8253&lt;/eissn&gt;\n                &lt;genre&gt;article&lt;/genre&gt;\n
+        \               &lt;ristype&gt;JOUR&lt;/ristype&gt;\n                &lt;doi&gt;10.5860/CHOICE.36-1963&lt;/doi&gt;\n
+        \             &lt;/addata&gt;\n            &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n
+        \       &lt;sear:GETIT deliveryCategory=&quot;Remote Search Resource&quot;
+        GetIt1=&quot;http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;amp;ctx_enc=info:ofi/enc:UTF-8&amp;amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;amp;url_ver=Z39.88-2004&amp;amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&amp;amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;amp;rft.genre=article&amp;amp;rft.atitle=Van%20Gogh&amp;amp;rft.jtitle=Choice%20Reviews%20Online&amp;amp;rft.btitle=&amp;amp;rft.aulast=&amp;amp;rft.auinit=&amp;amp;rft.auinit1=&amp;amp;rft.auinitm=&amp;amp;rft.ausuffix=&amp;amp;rft.au=&amp;amp;rft.aucorp=&amp;amp;rft.date=19981201&amp;amp;rft.volume=36&amp;amp;rft.issue=04&amp;amp;rft.part=&amp;amp;rft.quarter=&amp;amp;rft.ssn=&amp;amp;rft.spage=36-1963&amp;amp;rft.epage=36-1963&amp;amp;rft.pages=36-1963-36-1963&amp;amp;rft.artnum=&amp;amp;rft.issn=0009-4978&amp;amp;rft.eissn=1523-8253&amp;amp;rft.isbn=&amp;amp;rft.sici=&amp;amp;rft.coden=&amp;amp;rft_id=info:doi/10.5860/CHOICE.36-1963&amp;amp;rft.object_id=&amp;amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;amp;svc.fulltext=&amp;amp;rft.eisbn=&amp;amp;rft_dat=&amp;lt;crossref&gt;10.5860/CHOICE.36-1963&amp;lt;/crossref&gt;&amp;lt;grp_id&gt;5418720077066216478&amp;lt;/grp_id&gt;&amp;lt;oa&gt;&amp;lt;/oa&gt;&amp;amp;rft_id=info:oai/&amp;amp;template=openurlfull_article&amp;amp;req.language=&quot;
+        GetIt2=&quot;&quot;/&gt;&lt;sear:LINKS&gt;&lt;sear:openurl&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Van%20Gogh&amp;rft.jtitle=Choice%20Reviews%20Online&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.date=19981201&amp;rft.volume=36&amp;rft.issue=04&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=36-1963&amp;rft.epage=36-1963&amp;rft.pages=36-1963-36-1963&amp;rft.artnum=&amp;rft.issn=0009-4978&amp;rft.eissn=1523-8253&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.5860/CHOICE.36-1963&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;crossref&gt;10.5860/CHOICE.36-1963&lt;/crossref&gt;&lt;grp_id&gt;5418720077066216478&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;req.language=]]&gt;&lt;/sear:openurl&gt;&lt;sear:thumbnail/&gt;&lt;sear:openurlfulltext&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Van%20Gogh&amp;rft.jtitle=Choice%20Reviews%20Online&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.date=19981201&amp;rft.volume=36&amp;rft.issue=04&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=36-1963&amp;rft.epage=36-1963&amp;rft.pages=36-1963-36-1963&amp;rft.artnum=&amp;rft.issn=0009-4978&amp;rft.eissn=1523-8253&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/10.5860/CHOICE.36-1963&amp;rft.object_id=&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=&amp;rft.eisbn=&amp;rft_dat=&lt;crossref&gt;10.5860/CHOICE.36-1963&lt;/crossref&gt;&lt;grp_id&gt;5418720077066216478&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;template=openurlfull_article&amp;req.language=]]&gt;&lt;/sear:openurlfulltext&gt;&lt;sear:addlink&gt;https://exlibris-pub.s3.amazonaws.com/aboutCrossref.html&lt;/sear:addlink&gt;&lt;/sear:LINKS&gt;&lt;/sear:DOC&gt;\n
+        \       &lt;sear:DOC ID=&quot;56137930&quot; RANK=&quot;0.1&quot; NO=&quot;2&quot;
+        SEARCH_ENGINE=&quot;PrimoCentralThirdNode&quot; SEARCH_ENGINE_TYPE=&quot;Primo
+        Central Search Engine&quot; LOCAL=&quot;false&quot;&gt;\n          &lt;PrimoNMBib
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;275312207&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;gale_ofa&lt;/sourceid&gt;\n                &lt;recordid&gt;TN_gale_ofa275312207&lt;/recordid&gt;\n
+        \               &lt;sourceformat&gt;XML&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Other&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;article&lt;/type&gt;\n
+        \               &lt;title&gt;Van Gogh: The Life&lt;/title&gt;\n                &lt;creator&gt;Bethune,
+        Brian&lt;/creator&gt;\n                &lt;ispartof&gt;Maclean's, Dec 5, 2011,
+        Vol.124(47), p.77(1)&lt;/ispartof&gt;\n                &lt;identifier&gt;&amp;lt;b&gt;ISSN:
+        &amp;lt;/b&gt;0024-9262&lt;/identifier&gt;\n                &lt;language&gt;English&lt;/language&gt;\n
+        \               &lt;source&gt;Cengage Learning, Inc.&lt;/source&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_article&lt;/openurl&gt;\n
+        \               &lt;openurlfulltext&gt;$$Topenurlfull_article&lt;/openurlfulltext&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;scope&gt;gale_onefileg&lt;/scope&gt;\n
+        \               &lt;scope&gt;gale_onefilea&lt;/scope&gt;\n                &lt;creatorcontrib&gt;Bethune,
+        Brian&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Bethune&lt;/creatorcontrib&gt;\n
+        \               &lt;title&gt;Van Gogh: The Life.&lt;/title&gt;\n                &lt;general&gt;English&lt;/general&gt;\n
+        \               &lt;general&gt;Rogers Publishing Ltd.&lt;/general&gt;\n                &lt;general&gt;Cengage
+        Learning, Inc.&lt;/general&gt;\n                &lt;sourceid&gt;gale_ofa&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;gale_ofa275312207&lt;/recordid&gt;\n                &lt;issn&gt;0024-9262&lt;/issn&gt;\n
+        \               &lt;issn&gt;00249262&lt;/issn&gt;\n                &lt;rsrctype&gt;article&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;2011&lt;/creationdate&gt;\n                &lt;recordtype&gt;article&lt;/recordtype&gt;\n
+        \               &lt;addtitle&gt;Maclean's&lt;/addtitle&gt;\n                &lt;searchscope&gt;OneFile&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;OneFile&lt;/scope&gt;\n              &lt;/search&gt;\n
+        \             &lt;sort&gt;\n                &lt;title&gt;Van Gogh: The Life.&lt;/title&gt;\n
+        \               &lt;author&gt;Bethune, Brian&lt;/author&gt;\n                &lt;creationdate&gt;20111205&lt;/creationdate&gt;\n
+        \             &lt;/sort&gt;\n              &lt;facets&gt;\n                &lt;frbrgroupid&gt;4412197537331139454&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2011&lt;/creationdate&gt;\n                &lt;collection&gt;OneFile
+        (GALE)&lt;/collection&gt;\n                &lt;prefilter&gt;articles&lt;/prefilter&gt;\n
+        \               &lt;rsrctype&gt;articles&lt;/rsrctype&gt;\n                &lt;creatorcontrib&gt;Bethune,
+        Brian&lt;/creatorcontrib&gt;\n                &lt;jtitle&gt;Maclean's&lt;/jtitle&gt;\n
+        \             &lt;/facets&gt;\n              &lt;frbr&gt;\n                &lt;t&gt;2&lt;/t&gt;\n
+        \               &lt;k1&gt;2011&lt;/k1&gt;\n                &lt;k2&gt;00249262&lt;/k2&gt;\n
+        \               &lt;k4&gt;124&lt;/k4&gt;\n                &lt;k5&gt;47&lt;/k5&gt;\n
+        \               &lt;k6&gt;77&lt;/k6&gt;\n                &lt;k7&gt;maclean
+        apos s&lt;/k7&gt;\n                &lt;k8&gt;van gogh the life&lt;/k8&gt;\n
+        \               &lt;k9&gt;vangoghthelife&lt;/k9&gt;\n                &lt;k15&gt;brianbethune&lt;/k15&gt;\n
+        \               &lt;k16&gt;bethunebrian&lt;/k16&gt;\n              &lt;/frbr&gt;\n
+        \             &lt;delivery&gt;\n                &lt;delcategory&gt;Remote
+        Search Resource&lt;/delcategory&gt;\n                &lt;fulltext&gt;fulltext&lt;/fulltext&gt;\n
+        \             &lt;/delivery&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n                &lt;pcg_type&gt;aggregator&lt;/pcg_type&gt;\n
+        \             &lt;/ranking&gt;\n              &lt;addata&gt;\n                &lt;au&gt;Bethune,
+        Brian&lt;/au&gt;\n                &lt;atitle&gt;Van Gogh: The Life.&lt;/atitle&gt;\n
+        \               &lt;jtitle&gt;Maclean's&lt;/jtitle&gt;\n                &lt;date&gt;20111205&lt;/date&gt;\n
+        \               &lt;risdate&gt;20111205&lt;/risdate&gt;\n                &lt;volume&gt;124&lt;/volume&gt;\n
+        \               &lt;issue&gt;47&lt;/issue&gt;\n                &lt;spage&gt;77&lt;/spage&gt;\n
+        \               &lt;issn&gt;0024-9262&lt;/issn&gt;\n                &lt;genre&gt;article&lt;/genre&gt;\n
+        \               &lt;ristype&gt;JOUR&lt;/ristype&gt;\n                &lt;pub&gt;Rogers
+        Publishing Ltd.&lt;/pub&gt;\n                &lt;lad01&gt;gale_ofa&lt;/lad01&gt;\n
+        \             &lt;/addata&gt;\n            &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n
+        \       &lt;sear:GETIT deliveryCategory=&quot;Remote Search Resource&quot;
+        GetIt1=&quot;http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;amp;ctx_enc=info:ofi/enc:UTF-8&amp;amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;amp;url_ver=Z39.88-2004&amp;amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;amp;rft.genre=article&amp;amp;rft.atitle=Van%20Gogh:%20The%20Life.&amp;amp;rft.jtitle=Maclean%27s&amp;amp;rft.btitle=&amp;amp;rft.aulast=&amp;amp;rft.auinit=&amp;amp;rft.auinit1=&amp;amp;rft.auinitm=&amp;amp;rft.ausuffix=&amp;amp;rft.au=Bethune%2C%20Brian&amp;amp;rft.aucorp=&amp;amp;rft.date=20111205&amp;amp;rft.volume=124&amp;amp;rft.issue=47&amp;amp;rft.part=&amp;amp;rft.quarter=&amp;amp;rft.ssn=&amp;amp;rft.spage=77&amp;amp;rft.epage=&amp;amp;rft.pages=&amp;amp;rft.artnum=&amp;amp;rft.issn=0024-9262&amp;amp;rft.eissn=&amp;amp;rft.isbn=&amp;amp;rft.sici=&amp;amp;rft.coden=&amp;amp;rft_id=info:doi/&amp;amp;rft.object_id=&amp;amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;amp;svc.fulltext=&amp;amp;rft.eisbn=&amp;amp;rft_dat=&amp;lt;gale_ofa&gt;275312207&amp;lt;/gale_ofa&gt;&amp;lt;grp_id&gt;4412197537331139454&amp;lt;/grp_id&gt;&amp;lt;oa&gt;&amp;lt;/oa&gt;&amp;amp;rft_id=info:oai/&amp;amp;template=openurlfull_article&amp;amp;req.language=&quot;
+        GetIt2=&quot;&quot;/&gt;&lt;sear:LINKS&gt;&lt;sear:openurl&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Van%20Gogh:%20The%20Life.&amp;rft.jtitle=Maclean%27s&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Bethune%2C%20Brian&amp;rft.aucorp=&amp;rft.date=20111205&amp;rft.volume=124&amp;rft.issue=47&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=77&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=0024-9262&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;gale_ofa&gt;275312207&lt;/gale_ofa&gt;&lt;grp_id&gt;4412197537331139454&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;req.language=]]&gt;&lt;/sear:openurl&gt;&lt;sear:thumbnail/&gt;&lt;sear:openurlfulltext&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Van%20Gogh:%20The%20Life.&amp;rft.jtitle=Maclean%27s&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Bethune%2C%20Brian&amp;rft.aucorp=&amp;rft.date=20111205&amp;rft.volume=124&amp;rft.issue=47&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=77&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=0024-9262&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=&amp;rft.eisbn=&amp;rft_dat=&lt;gale_ofa&gt;275312207&lt;/gale_ofa&gt;&lt;grp_id&gt;4412197537331139454&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;template=openurlfull_article&amp;req.language=]]&gt;&lt;/sear:openurlfulltext&gt;&lt;/sear:LINKS&gt;&lt;/sear:DOC&gt;\n
+        \       &lt;sear:DOC ID=&quot;593203908&quot; RANK=&quot;0.1&quot; NO=&quot;3&quot;
+        SEARCH_ENGINE=&quot;PrimoCentralThirdNode&quot; SEARCH_ENGINE_TYPE=&quot;Primo
+        Central Search Engine&quot; LOCAL=&quot;false&quot;&gt;\n          &lt;PrimoNMBib
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;25579974&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;jstor_archive&lt;/sourceid&gt;\n                &lt;recordid&gt;TN_jstor_archive25579974&lt;/recordid&gt;\n
+        \               &lt;sourceformat&gt;XML&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Other&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;article&lt;/type&gt;\n
+        \               &lt;title&gt;Van Gogh&lt;/title&gt;\n                &lt;creator&gt;Smyth,
+        Gerard&lt;/creator&gt;\n                &lt;ispartof&gt;The Poetry Ireland
+        Review, 2002(72), pp.85-85&lt;/ispartof&gt;\n                &lt;identifier&gt;&amp;lt;b&gt;ISSN:&amp;lt;/b&gt;
+        03322998&lt;/identifier&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;source&gt;JSTOR&lt;/source&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_article&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Uhttp://www.jstor.org/stable/25579974$$EView_this_record_in_JSTOR&lt;/backlink&gt;\n
+        \               &lt;openurlfulltext&gt;$$Topenurlfull_article&lt;/openurlfulltext&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;Smyth,
+        Gerard&lt;/creatorcontrib&gt;\n                &lt;title&gt;Van Gogh&lt;/title&gt;\n
+        \               &lt;general&gt;English&lt;/general&gt;\n                &lt;general&gt;JSOTR&lt;/general&gt;\n
+        \               &lt;general&gt;Poetry Ireland Ltd.&lt;/general&gt;\n                &lt;sourceid&gt;jstor_archive&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;jstor_archive25579974&lt;/recordid&gt;\n                &lt;issn&gt;0332-2998&lt;/issn&gt;\n
+        \               &lt;issn&gt;03322998&lt;/issn&gt;\n                &lt;rsrctype&gt;article&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;2002&lt;/creationdate&gt;\n                &lt;recordtype&gt;article&lt;/recordtype&gt;\n
+        \               &lt;addtitle&gt;The Poetry Ireland Review&lt;/addtitle&gt;\n
+        \               &lt;searchscope&gt;jstor_ic&lt;/searchscope&gt;\n                &lt;scope&gt;jstor_ic&lt;/scope&gt;\n
+        \             &lt;/search&gt;\n              &lt;sort&gt;\n                &lt;title&gt;Van
+        Gogh&lt;/title&gt;\n                &lt;author&gt;Smyth, Gerard&lt;/author&gt;\n
+        \               &lt;creationdate&gt;20020401&lt;/creationdate&gt;\n              &lt;/sort&gt;\n
+        \             &lt;facets&gt;\n                &lt;frbrgroupid&gt;2843262240286033619&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2002&lt;/creationdate&gt;\n                &lt;collection&gt;JSTOR&lt;/collection&gt;\n
+        \               &lt;prefilter&gt;articles&lt;/prefilter&gt;\n                &lt;rsrctype&gt;articles&lt;/rsrctype&gt;\n
+        \               &lt;creatorcontrib&gt;Smyth, Gerard&lt;/creatorcontrib&gt;\n
+        \               &lt;jtitle&gt;Poetry Ireland Review&lt;/jtitle&gt;\n              &lt;/facets&gt;\n
+        \             &lt;frbr&gt;\n                &lt;t&gt;2&lt;/t&gt;\n                &lt;k1&gt;2002&lt;/k1&gt;\n
+        \               &lt;k2&gt;03322998&lt;/k2&gt;\n                &lt;k5&gt;72&lt;/k5&gt;\n
+        \               &lt;k6&gt;85&lt;/k6&gt;\n                &lt;k7&gt;poetry
+        ireland review&lt;/k7&gt;\n                &lt;k8&gt;van gogh&lt;/k8&gt;\n
+        \               &lt;k9&gt;vangogh&lt;/k9&gt;\n                &lt;k15&gt;gerardsmyth&lt;/k15&gt;\n
+        \               &lt;k16&gt;smythgerard&lt;/k16&gt;\n              &lt;/frbr&gt;\n
+        \             &lt;delivery&gt;\n                &lt;delcategory&gt;Remote
+        Search Resource&lt;/delcategory&gt;\n                &lt;fulltext&gt;fulltext&lt;/fulltext&gt;\n
+        \             &lt;/delivery&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n                &lt;pcg_type&gt;aggregator&lt;/pcg_type&gt;\n
+        \             &lt;/ranking&gt;\n              &lt;addata&gt;\n                &lt;aulast&gt;Smyth&lt;/aulast&gt;\n
+        \               &lt;aufirst&gt;Gerard&lt;/aufirst&gt;\n                &lt;au&gt;Smyth,
+        Gerard&lt;/au&gt;\n                &lt;atitle&gt;Van Gogh&lt;/atitle&gt;\n
+        \               &lt;jtitle&gt;The Poetry Ireland Review&lt;/jtitle&gt;\n                &lt;date&gt;20020401&lt;/date&gt;\n
+        \               &lt;risdate&gt;20020401&lt;/risdate&gt;\n                &lt;issue&gt;72&lt;/issue&gt;\n
+        \               &lt;spage&gt;85&lt;/spage&gt;\n                &lt;epage&gt;85&lt;/epage&gt;\n
+        \               &lt;pages&gt;85-85&lt;/pages&gt;\n                &lt;issn&gt;03322998&lt;/issn&gt;\n
+        \               &lt;format&gt;journal&lt;/format&gt;\n                &lt;genre&gt;article&lt;/genre&gt;\n
+        \               &lt;ristype&gt;JOUR&lt;/ristype&gt;\n                &lt;pub&gt;Poetry
+        Ireland Ltd.&lt;/pub&gt;\n              &lt;/addata&gt;\n            &lt;/record&gt;\n
+        \         &lt;/PrimoNMBib&gt;\n        &lt;sear:GETIT deliveryCategory=&quot;Remote
+        Search Resource&quot; GetIt1=&quot;http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;amp;ctx_enc=info:ofi/enc:UTF-8&amp;amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;amp;url_ver=Z39.88-2004&amp;amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-jstor_archive&amp;amp;rft_val_fmt=info:ofi/fmt:kev:mtx:journal&amp;amp;rft.genre=article&amp;amp;rft.atitle=Van%20Gogh&amp;amp;rft.jtitle=The%20Poetry%20Ireland%20Review&amp;amp;rft.btitle=&amp;amp;rft.aulast=Smyth&amp;amp;rft.auinit=&amp;amp;rft.auinit1=&amp;amp;rft.auinitm=&amp;amp;rft.ausuffix=&amp;amp;rft.au=Smyth%2C%20Gerard&amp;amp;rft.aucorp=&amp;amp;rft.date=20020401&amp;amp;rft.volume=&amp;amp;rft.issue=72&amp;amp;rft.part=&amp;amp;rft.quarter=&amp;amp;rft.ssn=&amp;amp;rft.spage=85&amp;amp;rft.epage=85&amp;amp;rft.pages=85-85&amp;amp;rft.artnum=&amp;amp;rft.issn=03322998&amp;amp;rft.eissn=&amp;amp;rft.isbn=&amp;amp;rft.sici=&amp;amp;rft.coden=&amp;amp;rft_id=info:doi/&amp;amp;rft.object_id=&amp;amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;amp;svc.fulltext=&amp;amp;rft.eisbn=&amp;amp;rft_dat=&amp;lt;jstor_archive&gt;25579974&amp;lt;/jstor_archive&gt;&amp;lt;grp_id&gt;2843262240286033619&amp;lt;/grp_id&gt;&amp;lt;oa&gt;&amp;lt;/oa&gt;&amp;amp;rft_id=info:oai/&amp;amp;template=openurlfull_article&amp;amp;req.language=&quot;
+        GetIt2=&quot;&quot;/&gt;&lt;sear:LINKS&gt;&lt;sear:openurl&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-jstor_archive&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:journal&amp;rft.genre=article&amp;rft.atitle=Van%20Gogh&amp;rft.jtitle=The%20Poetry%20Ireland%20Review&amp;rft.btitle=&amp;rft.aulast=Smyth&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Smyth%2C%20Gerard&amp;rft.aucorp=&amp;rft.date=20020401&amp;rft.volume=&amp;rft.issue=72&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=85&amp;rft.epage=85&amp;rft.pages=85-85&amp;rft.artnum=&amp;rft.issn=03322998&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;jstor_archive&gt;25579974&lt;/jstor_archive&gt;&lt;grp_id&gt;2843262240286033619&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;req.language=]]&gt;&lt;/sear:openurl&gt;&lt;sear:backlink&gt;http://www.jstor.org/stable/25579974&lt;/sear:backlink&gt;&lt;sear:thumbnail/&gt;&lt;sear:openurlfulltext&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-jstor_archive&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:journal&amp;rft.genre=article&amp;rft.atitle=Van%20Gogh&amp;rft.jtitle=The%20Poetry%20Ireland%20Review&amp;rft.btitle=&amp;rft.aulast=Smyth&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Smyth%2C%20Gerard&amp;rft.aucorp=&amp;rft.date=20020401&amp;rft.volume=&amp;rft.issue=72&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=85&amp;rft.epage=85&amp;rft.pages=85-85&amp;rft.artnum=&amp;rft.issn=03322998&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=&amp;rft.eisbn=&amp;rft_dat=&lt;jstor_archive&gt;25579974&lt;/jstor_archive&gt;&lt;grp_id&gt;2843262240286033619&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;template=openurlfull_article&amp;req.language=]]&gt;&lt;/sear:openurlfulltext&gt;&lt;/sear:LINKS&gt;&lt;/sear:DOC&gt;\n
+        \       &lt;sear:DOC ID=&quot;88661624&quot; RANK=&quot;0.050083812&quot;
+        NO=&quot;4&quot; SEARCH_ENGINE=&quot;PrimoCentralThirdNode&quot; SEARCH_ENGINE_TYPE=&quot;Primo
+        Central Search Engine&quot; LOCAL=&quot;false&quot;&gt;\n          &lt;PrimoNMBib
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;147615120&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;gale_ofa&lt;/sourceid&gt;\n                &lt;recordid&gt;TN_gale_ofa147615120&lt;/recordid&gt;\n
+        \               &lt;sourceformat&gt;XML&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Other&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;article&lt;/type&gt;\n
+        \               &lt;title&gt;What tortured the artist?(EDUCATION)(Vincent
+        van Gogh suffer of acute intermittent porphyria)(Brief article)&lt;/title&gt;\n
+        \               &lt;creator&gt;Leslie, Mitch&lt;/creator&gt;\n                &lt;ispartof&gt;Science,
+        April 28, 2006, Vol.312(5773), p.505(1)&lt;/ispartof&gt;\n                &lt;identifier&gt;&amp;lt;b&gt;ISSN:
+        &amp;lt;/b&gt;0036-8075&lt;/identifier&gt;\n                &lt;subject&gt;Porphyria
+        -- Research ; Porphyria -- Analysis&lt;/subject&gt;\n                &lt;language&gt;English&lt;/language&gt;\n
+        \               &lt;source&gt;Cengage Learning, Inc.&lt;/source&gt;\n                &lt;lds50&gt;peer_reviewed&lt;/lds50&gt;\n
+        \               &lt;version&gt;2&lt;/version&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_article&lt;/openurl&gt;\n
+        \               &lt;openurlfulltext&gt;$$Topenurlfull_article&lt;/openurlfulltext&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;scope&gt;gale_onefilea&lt;/scope&gt;\n
+        \               &lt;scope&gt;gale_onefileg&lt;/scope&gt;\n                &lt;creatorcontrib&gt;Leslie,
+        Mitch&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Leslie&lt;/creatorcontrib&gt;\n
+        \               &lt;title&gt;What tortured the artist?(EDUCATION)(Vincent
+        van Gogh suffer of acute intermittent porphyria)(Brief article)&lt;/title&gt;\n
+        \               &lt;subject&gt;Porphyria--Research&lt;/subject&gt;\n                &lt;subject&gt;Porphyria--Analysis&lt;/subject&gt;\n
+        \               &lt;subject&gt;United States&lt;/subject&gt;\n                &lt;subject&gt;1USA&lt;/subject&gt;\n
+        \               &lt;subject&gt;Gogh, Vincent Van&lt;/subject&gt;\n                &lt;subject&gt;Observations&lt;/subject&gt;\n
+        \               &lt;subject&gt;Health aspects&lt;/subject&gt;\n                &lt;general&gt;English&lt;/general&gt;\n
+        \               &lt;general&gt;American Association for the Advancement of
+        Science&lt;/general&gt;\n                &lt;general&gt;Cengage Learning,
+        Inc.&lt;/general&gt;\n                &lt;sourceid&gt;gale_ofa&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;gale_ofa147615120&lt;/recordid&gt;\n                &lt;issn&gt;0036-8075&lt;/issn&gt;\n
+        \               &lt;issn&gt;00368075&lt;/issn&gt;\n                &lt;rsrctype&gt;article&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;2006&lt;/creationdate&gt;\n                &lt;recordtype&gt;article&lt;/recordtype&gt;\n
+        \               &lt;addtitle&gt;Science&lt;/addtitle&gt;\n                &lt;searchscope&gt;OneFile&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;OneFile&lt;/scope&gt;\n              &lt;/search&gt;\n
+        \             &lt;sort&gt;\n                &lt;title&gt;What tortured the
+        artist?(EDUCATION)(Vincent van Gogh suffer of acute intermittent porphyria)(Brief
+        article)&lt;/title&gt;\n                &lt;author&gt;Leslie, Mitch&lt;/author&gt;\n
+        \               &lt;creationdate&gt;20060428&lt;/creationdate&gt;\n              &lt;/sort&gt;\n
+        \             &lt;facets&gt;\n                &lt;frbrgroupid&gt;6359258460248509776&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;5&lt;/frbrtype&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2006&lt;/creationdate&gt;\n                &lt;topic&gt;Porphyria&#x2013;Research&lt;/topic&gt;\n
+        \               &lt;topic&gt;Porphyria&#x2013;Analysis&lt;/topic&gt;\n                &lt;collection&gt;OneFile
+        (GALE)&lt;/collection&gt;\n                &lt;prefilter&gt;articles&lt;/prefilter&gt;\n
+        \               &lt;rsrctype&gt;articles&lt;/rsrctype&gt;\n                &lt;creatorcontrib&gt;Leslie,
+        Mitch&lt;/creatorcontrib&gt;\n                &lt;jtitle&gt;Science&lt;/jtitle&gt;\n
+        \               &lt;toplevel&gt;peer_reviewed&lt;/toplevel&gt;\n              &lt;/facets&gt;\n
+        \             &lt;frbr&gt;\n                &lt;t&gt;2&lt;/t&gt;\n                &lt;k1&gt;2006&lt;/k1&gt;\n
+        \               &lt;k2&gt;00368075&lt;/k2&gt;\n                &lt;k4&gt;312&lt;/k4&gt;\n
+        \               &lt;k5&gt;5773&lt;/k5&gt;\n                &lt;k6&gt;505&lt;/k6&gt;\n
+        \               &lt;k7&gt;science&lt;/k7&gt;\n                &lt;k8&gt;what
+        tortured the artist&lt;/k8&gt;\n                &lt;k9&gt;whattorturedtheartist&lt;/k9&gt;\n
+        \               &lt;k15&gt;mitchleslie&lt;/k15&gt;\n                &lt;k16&gt;lesliemitch&lt;/k16&gt;\n
+        \             &lt;/frbr&gt;\n              &lt;delivery&gt;\n                &lt;delcategory&gt;Remote
+        Search Resource&lt;/delcategory&gt;\n                &lt;fulltext&gt;fulltext&lt;/fulltext&gt;\n
+        \             &lt;/delivery&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n                &lt;pcg_type&gt;aggregator&lt;/pcg_type&gt;\n
+        \             &lt;/ranking&gt;\n              &lt;addata&gt;\n                &lt;au&gt;Leslie,
+        Mitch&lt;/au&gt;\n                &lt;atitle&gt;What tortured the artist?(EDUCATION)(Vincent
+        van Gogh suffer of acute intermittent porphyria)(Brief article)&lt;/atitle&gt;\n
+        \               &lt;jtitle&gt;Science&lt;/jtitle&gt;\n                &lt;date&gt;20060428&lt;/date&gt;\n
+        \               &lt;risdate&gt;20060428&lt;/risdate&gt;\n                &lt;volume&gt;312&lt;/volume&gt;\n
+        \               &lt;issue&gt;5773&lt;/issue&gt;\n                &lt;spage&gt;505&lt;/spage&gt;\n
+        \               &lt;issn&gt;0036-8075&lt;/issn&gt;\n                &lt;genre&gt;article&lt;/genre&gt;\n
+        \               &lt;ristype&gt;JOUR&lt;/ristype&gt;\n                &lt;pub&gt;American
+        Association for the Advancement of Science&lt;/pub&gt;\n                &lt;lad01&gt;gale_ofa&lt;/lad01&gt;\n
+        \             &lt;/addata&gt;\n            &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n
+        \       &lt;sear:GETIT deliveryCategory=&quot;Remote Search Resource&quot;
+        GetIt1=&quot;http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;amp;ctx_enc=info:ofi/enc:UTF-8&amp;amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;amp;url_ver=Z39.88-2004&amp;amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;amp;rft.genre=article&amp;amp;rft.atitle=What%20tortured%20the%20artist%3F(EDUCATION)(Vincent%20van%20Gogh%20suffer%20of%20acute%20intermittent%20porphyria)(Brief%20article)&amp;amp;rft.jtitle=Science&amp;amp;rft.btitle=&amp;amp;rft.aulast=&amp;amp;rft.auinit=&amp;amp;rft.auinit1=&amp;amp;rft.auinitm=&amp;amp;rft.ausuffix=&amp;amp;rft.au=Leslie%2C%20Mitch&amp;amp;rft.aucorp=&amp;amp;rft.date=20060428&amp;amp;rft.volume=312&amp;amp;rft.issue=5773&amp;amp;rft.part=&amp;amp;rft.quarter=&amp;amp;rft.ssn=&amp;amp;rft.spage=505&amp;amp;rft.epage=&amp;amp;rft.pages=&amp;amp;rft.artnum=&amp;amp;rft.issn=0036-8075&amp;amp;rft.eissn=&amp;amp;rft.isbn=&amp;amp;rft.sici=&amp;amp;rft.coden=&amp;amp;rft_id=info:doi/&amp;amp;rft.object_id=&amp;amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;amp;svc.fulltext=&amp;amp;rft.eisbn=&amp;amp;rft_dat=&amp;lt;gale_ofa&gt;147615120&amp;lt;/gale_ofa&gt;&amp;lt;grp_id&gt;6359258460248509776&amp;lt;/grp_id&gt;&amp;lt;oa&gt;&amp;lt;/oa&gt;&amp;amp;rft_id=info:oai/&amp;amp;template=openurlfull_article&amp;amp;req.language=&quot;
+        GetIt2=&quot;&quot;/&gt;&lt;sear:LINKS&gt;&lt;sear:openurl&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=What%20tortured%20the%20artist%3F(EDUCATION)(Vincent%20van%20Gogh%20suffer%20of%20acute%20intermittent%20porphyria)(Brief%20article)&amp;rft.jtitle=Science&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Leslie%2C%20Mitch&amp;rft.aucorp=&amp;rft.date=20060428&amp;rft.volume=312&amp;rft.issue=5773&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=505&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=0036-8075&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;gale_ofa&gt;147615120&lt;/gale_ofa&gt;&lt;grp_id&gt;6359258460248509776&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;req.language=]]&gt;&lt;/sear:openurl&gt;&lt;sear:thumbnail/&gt;&lt;sear:openurlfulltext&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=What%20tortured%20the%20artist%3F(EDUCATION)(Vincent%20van%20Gogh%20suffer%20of%20acute%20intermittent%20porphyria)(Brief%20article)&amp;rft.jtitle=Science&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Leslie%2C%20Mitch&amp;rft.aucorp=&amp;rft.date=20060428&amp;rft.volume=312&amp;rft.issue=5773&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=505&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=0036-8075&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=&amp;rft.eisbn=&amp;rft_dat=&lt;gale_ofa&gt;147615120&lt;/gale_ofa&gt;&lt;grp_id&gt;6359258460248509776&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;template=openurlfull_article&amp;req.language=]]&gt;&lt;/sear:openurlfulltext&gt;&lt;/sear:LINKS&gt;&lt;/sear:DOC&gt;\n
+        \       &lt;sear:DOC ID=&quot;482064110&quot; RANK=&quot;0.0493454&quot; NO=&quot;5&quot;
+        SEARCH_ENGINE=&quot;PrimoCentralThirdNode&quot; SEARCH_ENGINE_TYPE=&quot;Primo
+        Central Search Engine&quot; LOCAL=&quot;false&quot;&gt;\n          &lt;PrimoNMBib
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;293165368&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;gale_ofa&lt;/sourceid&gt;\n                &lt;recordid&gt;TN_gale_ofa293165368&lt;/recordid&gt;\n
+        \               &lt;sourceformat&gt;XML&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Other&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;article&lt;/type&gt;\n
+        \               &lt;title&gt;Beautiful mutants.(Advances / Best of the Blogs
+        / Botany)(mutated sunflowers depicted in Vincent van Gogh's oil paintings)&lt;/title&gt;\n
+        \               &lt;creator&gt;Jabr, Ferris&lt;/creator&gt;\n                &lt;ispartof&gt;Scientific
+        American, June, 2012, Vol.306(6), p.28(1)&lt;/ispartof&gt;\n                &lt;identifier&gt;&amp;lt;b&gt;ISSN:
+        &amp;lt;/b&gt;0036-8733&lt;/identifier&gt;\n                &lt;subject&gt;Sunflowers
+        -- Research ; Sunflowers -- Portrayals ; Sunflowers -- Genetic Aspects ; Dutch
+        Painters -- Works ; Gene Mutation -- Research ; Plant Mutation -- Research&lt;/subject&gt;\n
+        \               &lt;description&gt;Researchers from the University of Georgia
+        attributed the floral arrangements of sunflowers depicted in Vincent Van Gogh's
+        oil paintings from the late 1880s to mutations of the HaCYC2c gene. Instead
+        of showing yellow petals encircling a dark whorl of seeds, Van Gogh's paintings
+        portray doubled-flowered blooms that have abundant small yellow petals.&lt;/description&gt;\n
+        \               &lt;language&gt;English&lt;/language&gt;\n                &lt;source&gt;Cengage
+        Learning, Inc.&lt;/source&gt;\n                &lt;lds50&gt;peer_reviewed&lt;/lds50&gt;\n
+        \               &lt;version&gt;2&lt;/version&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_article&lt;/openurl&gt;\n
+        \               &lt;openurlfulltext&gt;$$Topenurlfull_article&lt;/openurlfulltext&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;scope&gt;gale_onefilea&lt;/scope&gt;\n
+        \               &lt;scope&gt;gale_onefileg&lt;/scope&gt;\n                &lt;creatorcontrib&gt;Jabr,
+        Ferris&lt;/creatorcontrib&gt;\n                &lt;title&gt;Beautiful mutants.(Advances
+        / Best of the Blogs / Botany)(mutated sunflowers depicted in Vincent van Gogh's
+        oil paintings)&lt;/title&gt;\n                &lt;description&gt;Researchers
+        from the University of Georgia attributed the floral arrangements of sunflowers
+        depicted in Vincent Van Gogh's oil paintings from the late 1880s to mutations
+        of the HaCYC2c gene. Instead of showing yellow petals encircling a dark whorl
+        of seeds, Van Gogh's paintings portray doubled-flowered blooms that have abundant
+        small yellow petals.&lt;/description&gt;\n                &lt;subject&gt;Sunflowers--Research&lt;/subject&gt;\n
+        \               &lt;subject&gt;Sunflowers--Portrayals&lt;/subject&gt;\n                &lt;subject&gt;Sunflowers--Genetic
+        aspects&lt;/subject&gt;\n                &lt;subject&gt;Dutch painters--Works&lt;/subject&gt;\n
+        \               &lt;subject&gt;Gene mutation--Research&lt;/subject&gt;\n                &lt;subject&gt;Plant
+        mutation--Research&lt;/subject&gt;\n                &lt;subject&gt;United
+        States&lt;/subject&gt;\n                &lt;subject&gt;1USA&lt;/subject&gt;\n
+        \               &lt;subject&gt;Gogh, Vincent Van&lt;/subject&gt;\n                &lt;subject&gt;Works&lt;/subject&gt;\n
+        \               &lt;general&gt;English&lt;/general&gt;\n                &lt;general&gt;Scientific
+        American, Inc.&lt;/general&gt;\n                &lt;general&gt;Cengage Learning,
+        Inc.&lt;/general&gt;\n                &lt;sourceid&gt;gale_ofa&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;gale_ofa293165368&lt;/recordid&gt;\n                &lt;issn&gt;0036-8733&lt;/issn&gt;\n
+        \               &lt;issn&gt;00368733&lt;/issn&gt;\n                &lt;rsrctype&gt;article&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;2012&lt;/creationdate&gt;\n                &lt;recordtype&gt;article&lt;/recordtype&gt;\n
+        \               &lt;addtitle&gt;Scientific American&lt;/addtitle&gt;\n                &lt;searchscope&gt;OneFile&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;OneFile&lt;/scope&gt;\n              &lt;/search&gt;\n
+        \             &lt;sort&gt;\n                &lt;title&gt;Beautiful mutants.(Advances
+        / Best of the Blogs / Botany)(mutated sunflowers depicted in Vincent van Gogh's
+        oil paintings)&lt;/title&gt;\n                &lt;author&gt;Jabr, Ferris&lt;/author&gt;\n
+        \               &lt;creationdate&gt;20120601&lt;/creationdate&gt;\n              &lt;/sort&gt;\n
+        \             &lt;facets&gt;\n                &lt;frbrgroupid&gt;5768430088859704746&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;5&lt;/frbrtype&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2012&lt;/creationdate&gt;\n                &lt;topic&gt;Sunflowers&#x2013;Research&lt;/topic&gt;\n
+        \               &lt;topic&gt;Sunflowers&#x2013;Portrayals&lt;/topic&gt;\n
+        \               &lt;topic&gt;Sunflowers&#x2013;Genetic Aspects&lt;/topic&gt;\n
+        \               &lt;topic&gt;Dutch Painters&#x2013;Works&lt;/topic&gt;\n                &lt;topic&gt;Gene
+        Mutation&#x2013;Research&lt;/topic&gt;\n                &lt;topic&gt;Plant
+        Mutation&#x2013;Research&lt;/topic&gt;\n                &lt;collection&gt;OneFile
+        (GALE)&lt;/collection&gt;\n                &lt;prefilter&gt;articles&lt;/prefilter&gt;\n
+        \               &lt;rsrctype&gt;articles&lt;/rsrctype&gt;\n                &lt;creatorcontrib&gt;Jabr,
+        Ferris&lt;/creatorcontrib&gt;\n                &lt;jtitle&gt;Scientific American&lt;/jtitle&gt;\n
+        \               &lt;toplevel&gt;peer_reviewed&lt;/toplevel&gt;\n              &lt;/facets&gt;\n
+        \             &lt;frbr&gt;\n                &lt;t&gt;2&lt;/t&gt;\n                &lt;k1&gt;2012&lt;/k1&gt;\n
+        \               &lt;k2&gt;00368733&lt;/k2&gt;\n                &lt;k4&gt;306&lt;/k4&gt;\n
+        \               &lt;k5&gt;6&lt;/k5&gt;\n                &lt;k6&gt;28&lt;/k6&gt;\n
+        \               &lt;k7&gt;scientific american&lt;/k7&gt;\n                &lt;k8&gt;beautiful
+        mutants&lt;/k8&gt;\n                &lt;k9&gt;beautifulmutants&lt;/k9&gt;\n
+        \               &lt;k15&gt;ferrisjabr&lt;/k15&gt;\n                &lt;k16&gt;jabrferris&lt;/k16&gt;\n
+        \             &lt;/frbr&gt;\n              &lt;delivery&gt;\n                &lt;delcategory&gt;Remote
+        Search Resource&lt;/delcategory&gt;\n                &lt;fulltext&gt;fulltext&lt;/fulltext&gt;\n
+        \             &lt;/delivery&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n                &lt;pcg_type&gt;aggregator&lt;/pcg_type&gt;\n
+        \             &lt;/ranking&gt;\n              &lt;addata&gt;\n                &lt;au&gt;Jabr,
+        Ferris&lt;/au&gt;\n                &lt;atitle&gt;Beautiful mutants.(Advances
+        / Best of the Blogs / Botany)(mutated sunflowers depicted in Vincent van Gogh's
+        oil paintings)&lt;/atitle&gt;\n                &lt;jtitle&gt;Scientific American&lt;/jtitle&gt;\n
+        \               &lt;date&gt;20120601&lt;/date&gt;\n                &lt;risdate&gt;20120601&lt;/risdate&gt;\n
+        \               &lt;volume&gt;306&lt;/volume&gt;\n                &lt;issue&gt;6&lt;/issue&gt;\n
+        \               &lt;spage&gt;28&lt;/spage&gt;\n                &lt;issn&gt;0036-8733&lt;/issn&gt;\n
+        \               &lt;genre&gt;article&lt;/genre&gt;\n                &lt;ristype&gt;JOUR&lt;/ristype&gt;\n
+        \               &lt;abstract&gt;Researchers from the University of Georgia
+        attributed the floral arrangements of sunflowers depicted in Vincent Van Gogh's
+        oil paintings from the late 1880s to mutations of the HaCYC2c gene. Instead
+        of showing yellow petals encircling a dark whorl of seeds, Van Gogh's paintings
+        portray doubled-flowered blooms that have abundant small yellow petals.&lt;/abstract&gt;\n
+        \               &lt;pub&gt;Scientific American, Inc.&lt;/pub&gt;\n                &lt;lad01&gt;gale_ofa&lt;/lad01&gt;\n
+        \             &lt;/addata&gt;\n            &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n
+        \       &lt;sear:GETIT deliveryCategory=&quot;Remote Search Resource&quot;
+        GetIt1=&quot;http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;amp;ctx_enc=info:ofi/enc:UTF-8&amp;amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;amp;url_ver=Z39.88-2004&amp;amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;amp;rft.genre=article&amp;amp;rft.atitle=Beautiful%20mutants.(Advances%20/%20Best%20of%20the%20Blogs%20/%20Botany)(mutated%20sunflowers%20depicted%20in%20Vincent%20van%20Gogh%27s%20oil%20paintings)&amp;amp;rft.jtitle=Scientific%20American&amp;amp;rft.btitle=&amp;amp;rft.aulast=&amp;amp;rft.auinit=&amp;amp;rft.auinit1=&amp;amp;rft.auinitm=&amp;amp;rft.ausuffix=&amp;amp;rft.au=Jabr%2C%20Ferris&amp;amp;rft.aucorp=&amp;amp;rft.date=20120601&amp;amp;rft.volume=306&amp;amp;rft.issue=6&amp;amp;rft.part=&amp;amp;rft.quarter=&amp;amp;rft.ssn=&amp;amp;rft.spage=28&amp;amp;rft.epage=&amp;amp;rft.pages=&amp;amp;rft.artnum=&amp;amp;rft.issn=0036-8733&amp;amp;rft.eissn=&amp;amp;rft.isbn=&amp;amp;rft.sici=&amp;amp;rft.coden=&amp;amp;rft_id=info:doi/&amp;amp;rft.object_id=&amp;amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;amp;svc.fulltext=&amp;amp;rft.eisbn=&amp;amp;rft_dat=&amp;lt;gale_ofa&gt;293165368&amp;lt;/gale_ofa&gt;&amp;lt;grp_id&gt;5768430088859704746&amp;lt;/grp_id&gt;&amp;lt;oa&gt;&amp;lt;/oa&gt;&amp;amp;rft_id=info:oai/&amp;amp;template=openurlfull_article&amp;amp;req.language=&quot;
+        GetIt2=&quot;&quot;/&gt;&lt;sear:LINKS&gt;&lt;sear:openurl&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Beautiful%20mutants.(Advances%20/%20Best%20of%20the%20Blogs%20/%20Botany)(mutated%20sunflowers%20depicted%20in%20Vincent%20van%20Gogh%27s%20oil%20paintings)&amp;rft.jtitle=Scientific%20American&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Jabr%2C%20Ferris&amp;rft.aucorp=&amp;rft.date=20120601&amp;rft.volume=306&amp;rft.issue=6&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=28&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=0036-8733&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;gale_ofa&gt;293165368&lt;/gale_ofa&gt;&lt;grp_id&gt;5768430088859704746&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;req.language=]]&gt;&lt;/sear:openurl&gt;&lt;sear:thumbnail/&gt;&lt;sear:openurlfulltext&gt;&lt;![CDATA[http://findtext.library.nd.edu:8889/ndu_local?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2014-06-05T12%3A49%3A33IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-gale_ofa&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:&amp;rft.genre=article&amp;rft.atitle=Beautiful%20mutants.(Advances%20/%20Best%20of%20the%20Blogs%20/%20Botany)(mutated%20sunflowers%20depicted%20in%20Vincent%20van%20Gogh%27s%20oil%20paintings)&amp;rft.jtitle=Scientific%20American&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Jabr%2C%20Ferris&amp;rft.aucorp=&amp;rft.date=20120601&amp;rft.volume=306&amp;rft.issue=6&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=28&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=0036-8733&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=&amp;rft.eisbn=&amp;rft_dat=&lt;gale_ofa&gt;293165368&lt;/gale_ofa&gt;&lt;grp_id&gt;5768430088859704746&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&amp;template=openurlfull_article&amp;req.language=]]&gt;&lt;/sear:openurlfulltext&gt;&lt;/sear:LINKS&gt;&lt;/sear:DOC&gt;\n
+        \       \n        \n        \n        \n        \n      &lt;/sear:DOCSET&gt;\n
+        \   &lt;/sear:RESULT&gt;\n    &lt;sear:searchToken&gt;0&lt;/sear:searchToken&gt;\n
+        \ &lt;/sear:JAGROOT&gt;&lt;/sear:SEGMENTS&gt;</searchBriefReturn></ns1:searchBriefResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Thu, 05 Jun 2014 16:49:33 GMT
+recorded_with: VCR 2.5.0
