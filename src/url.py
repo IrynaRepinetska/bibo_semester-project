@@ -1,6 +1,11 @@
+#!/usr/bin/python3
+import string
+import re
 from urllib.request import urlopen
 from urllib.parse import urlparse, urlunparse, urljoin, parse_qsl, urlencode
 from bs4 import BeautifulSoup as Bsoup
+from bs4 import Comment
+from multiprocessing import Pool
 
 def build_keyword(opt, field):
     """
@@ -45,32 +50,104 @@ def build_url(base, tail , term1, term2=None, term3=None, time=None, material=No
     if time:
         url = url + '&vl(123424475UI6)=' + time
     if material:
-        url = url + '&vl(123424476UI6)=' + material
+        url = url + '&vl(123424476UI7)=' + material
     if lang:
-        url = url + '&vl(123424477UI6)=' + lang
+        url = url + '&vl(123424477UI8)=' + lang
     return url + tail
 
 base ='http://primo.kobv.de/primo_library/libweb/action/search.do?tab=default_tab'
 tail ='&Submit=&fn=search&ct=search&mode=Advanced&vid=hub_ub&indx=1&dum=true&srt=rank&initialSearch=true'
-"""print(build_url(base,tail,['xml']))
-print(build_url(base,tail,['xml'],['html']))
-print(build_url(base,tail,['xml'],['html'],['zucker']))
-print(build_url(base,tail,['xml'],False,False,'20-YEAR'))
-print(build_url(base,tail,['xml'],False,False,False,'maps'))
-print(build_url(base,tail,['xml'],False,False,False,False,'ger'))
+
+"""
+author  = lambda target: hit['author'] = target.find("li",{"id":"Autor-1"}).find('a').contents[0]
+publ    = lambda target: target.find("li", {"id":"Verlag-1"}).find('span').contents[0]
+year    = lambda target: target.find("li",{"id":"Erscheinungsjahr-1"}).find('span').contents[0] 
+forma   = lambda target: target.find("li", {"id":"Format-1"}).find('span').contents[0]
+ids     = lambda target: target.find("li", {"id":"Identifikator-1"}).find('span').contents[0]
+desc    = lambda target: target.find("li", {"id":"Beschreibung-1"}).find('span').contents[0]
+connect = lambda target: target.find("li", {"id":"Verknüpfte Titel-1"}).find('span').contents[0]
+lang    = lambda target: str(target.find("li",{"id":"Sprache-1"}).contents[8]).strip('\t\n')
+rvk     = lambda target: target.find("li", {"id":"RVK-Klassifikation-1"}).find('a').contents[0]
+source  = lambda target: target.find("li", {"id":"Quelle-1"}).find('span').contents[0]
+
+author2  = lambda target: target.find("li",{"id":"Autor1"}).find('a').contents[0]
+publ2    = lambda target: target.find("li", {"id":"Verlag1"}).find('span').contents[0]
+year2    = lambda target: target.find("li",{"id":"Erscheinungsjahr1"}).find('span').contents[0] 
+forma2   = lambda target: target.find("li", {"id":"Format1"}).find('span').contents[0]
+ids2     = lambda target: target.find("li", {"id":"Identifikator1"}).find('span').contents[0]
+desc2    = lambda target: target.find("li", {"id":"Beschreibung1"}).find('span').contents[0]
+connect2 = lambda target: target.find("li", {"id":"Verknüpfte Titel1"}).find('span').contents[0]
+lang2    = lambda target: str(target.find("li",{"id":"Sprache1"}).contents[8]).strip('\t\n')
+rvk2     = lambda target: target.find("li", {"id":"RVK-Klassifikation1"}).find('a').contents[0]
+source2  = lambda target: target.find("li", {"id":"Quelle1"}).find('span').contents[0]
 """
 
-"""playing with html"""
-pattern =[x for x in input('Three comma seperated keywords: ').split(',')]
-#html = urlopen(build_url(base,tail,pattern))
-#soup = Bsoup(html, 'lxml')
-print(build_url(base,tail,pattern))
+def author(target, hit):
+    hit['author']   = target.find("li",{"id":"Autor-1"}).find('a').contents[0]
+def publ(target, hit):
+    hit['publ']     = target.find("li", {"id":"Verlag-1"}).find('span').contents[0]
+def year(target, hit):
+    hit['year']     = target.find("li",{"id":"Erscheinungsjahr-1"}).find('span').contents[0]
+def forma(target, hit):
+    hit['forma']    = target.find("li", {"id":"Format-1"}).find('span').contents[0]
+def ids(target, hit):
+    hit['ids']      = target.find("li", {"id":"Identifikator-1"}).find('span').contents[0]
+def desc(target, hit):
+    hit['desc']     = target.find("li", {"id":"Beschreibung-1"}).find('span').contents[0]
+def connect(target, hit):
+    hit['connect']  = target.find("li", {"id":"Verknüpfte Titel-1"}).find('span').contents[0]
+def lang(target, hit):
+    hit['lang']     = str(target.find("li",{"id":"Sprache-1"}).contents[8]).strip('\t\n')
+def rvk(target, hit):
+    hit['rvk']      = target.find("li", {"id":"RVK-Klassifikation-1"}).find('a').contents[0]
+def source(target, hit):
+    hit['source']   = target.find("li", {"id":"Quelle-1"}).find('span').contents[0]
 
-"""#every element(book) contains in a tr element wit id "exlidResult[0..9]"
-tr = "exlidResult"
-#parse html
-#print all tr elements
-#print(soup.find_all('tr'))
-x = html.read()
-x = str(x).replace("\\n","").replace("\\t","").replace("\\r","")
-print(x)"""
+def author2(target, hit):
+    hit['author']   = target.find("li",{"id":"Autor1"}).find('a').contents[0]
+def publ2(target, hit):
+    hit['publ']     = target.find("li", {"id":"Verlag1"}).find('span').contents[0]
+def year2(target, hit):
+    hit['year']     = target.find("li",{"id":"Erscheinungsjahr1"}).find('span').contents[0]
+def forma2(target, hit):
+    hit['forma']    = target.find("li", {"id":"Format1"}).find('span').contents[0]
+def ids2(target, hit):
+    hit['ids']      = target.find("li", {"id":"Identifikator1"}).find('span').contents[1]
+def desc2(target, hit):
+    hit['desc']     = target.find("li", {"id":"Beschreibung1"}).find('span').contents[0]
+def connect2(target, hit):
+    hit['connect']  = target.find("li", {"id":"Verknüpfte Titel1"}).find('span').contents[0]
+def lang2(target, hit):
+    hit['lang']     = str(target.find("li",{"id":"Sprache1"}).contents[8]).strip('\t\n')
+def rvk2(target, hit):
+    hit['rvk']      = target.find("li", {"id":"RVK-Klassifikation1"}).find('a').contents[0]
+def source2(target, hit):
+    hit['source']   = target.find("li", {"id":"Quelle1"}).find('span').contents[0]
+
+functions =[author, publ, year, forma, ids, desc, connect, lang, rvk, source,
+        author2, publ2, year2, forma2, ids2, desc2, connect2, lang2, rvk2, source2]
+
+
+
+html = urlopen(build_url(base,tail,['xml']))
+soup = Bsoup(html, 'lxml')
+docs=[]
+for targeter in soup.find_all('li', {'class':'EXLDetailsTab EXLResultTab '}):
+    #pool = Pool(processes=10)
+    hit={}
+    co = ""
+    link = targeter.find("a").text.strip(), '=>', targeter.find("a").attrs['href']
+    target = Bsoup(urlopen("http://primo.kobv.de/primo_library/libweb/action/display.do"
+        +re.search(r'\?tabs.*',str(link)).group(0)), 'lxml')
+    for func in functions:
+        try:
+            #pool.apply_async(func, [target,hit])
+            func(target, hit)
+        except:
+            pass
+    docs.append(hit)
+    print(hit)
+    """
+    print("http://primo.kobv.de/primo_library/libweb/action/display.do"
+        +re.search(r'\?tabs.*',str(link)).group(0))
+"""
