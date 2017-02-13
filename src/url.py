@@ -7,12 +7,16 @@ from bs4 import BeautifulSoup as Bsoup
 from bs4 import Comment
 from multiprocessing import Pool
 
-def build_keyword(opt, field):
+
+def build_keyword(term, opt, field):
     """
     Function checks if opt contains exact or contain to decide which opt belongs to which
     code. Then Builds the string and retuns a url equivalent of search query for one word
     """
     #TODO Try clause not working
+    search = '&vl(123424466UI0)=' + opt + '&vl(freeText' + str(field)  + ')=' + term
+    return search
+"""
     search = '&vl(freeText' + field  + ')=' + opt[0]
     try:
         if len(opt)==3:
@@ -33,14 +37,24 @@ def build_keyword(opt, field):
     except (TypeError):
         print('No valid option!')
     return search
+"""
 
-def build_url(base, tail , term1, term2=None, term3=None, time=None, material=None, lang=None):
+def build_url(request, time=None, material=None, lang=None):
     """
     Builds the whole search url
     Usage:Base URL of Primo libary
     term[1-3]: A List containing at least the searchword
     time, material, lang: Valid opt from Primo as string (to be included)
     !Every opt thats not used has to be called with False!
+    """
+    base ='http://primo.kobv.de/primo_library/libweb/action/search.do?tab=default_tab'
+    tail ='&Submit=&fn=search&ct=search&mode=Advanced&vid=hub_ub&indx=1&dum=true&srt=rank&initialSearch=true'
+    url = base
+    field_num=0
+    for term in request:
+        url = url + build_keyword(request[term],term,field_num)
+        field_num += 1
+    return url+tail
     """
     url = base + build_keyword(term1, '0')
     if term3:
@@ -54,9 +68,7 @@ def build_url(base, tail , term1, term2=None, term3=None, time=None, material=No
     if lang:
         url = url + '&vl(123424477UI8)=' + lang
     return url + tail
-
-base ='http://primo.kobv.de/primo_library/libweb/action/search.do?tab=default_tab'
-tail ='&Submit=&fn=search&ct=search&mode=Advanced&vid=hub_ub&indx=1&dum=true&srt=rank&initialSearch=true'
+    """
 
 """
 author  = lambda target: hit['author'] = target.find("li",{"id":"Autor-1"}).find('a').contents[0]
@@ -127,27 +139,27 @@ def source2(target, hit):
 functions =[author, publ, year, forma, ids, desc, connect, lang, rvk, source,
         author2, publ2, year2, forma2, ids2, desc2, connect2, lang2, rvk2, source2]
 
-
-
-html = urlopen(build_url(base,tail,['xml']))
-soup = Bsoup(html, 'lxml')
-docs=[]
-for targeter in soup.find_all('li', {'class':'EXLDetailsTab EXLResultTab '}):
-    #pool = Pool(processes=10)
-    hit={}
-    co = ""
-    link = targeter.find("a").text.strip(), '=>', targeter.find("a").attrs['href']
-    target = Bsoup(urlopen("http://primo.kobv.de/primo_library/libweb/action/display.do"
-        +re.search(r'\?tabs.*',str(link)).group(0)), 'lxml')
-    for func in functions:
-        try:
-            #pool.apply_async(func, [target,hit])
-            func(target, hit)
-        except:
-            pass
-    docs.append(hit)
-    print(hit)
+if __name__ == "__main__":
+    request={'any':'xml'}
+    html = urlopen(build_url(request))
+    soup = Bsoup(html, 'lxml')
+    docs=[]
+    for targeter in soup.find_all('li', {'class':'EXLDetailsTab EXLResultTab '}):
+        #pool = Pool(processes=10)
+        hit={}
+        co = ""
+        link = targeter.find("a").text.strip(), '=>', targeter.find("a").attrs['href']
+        target = Bsoup(urlopen("http://primo.kobv.de/primo_library/libweb/action/display.do"
+            +re.search(r'\?tabs.*',str(link)).group(0)), 'lxml')
+        for func in functions:
+            try:
+                #pool.apply_async(func, [target,hit])
+                func(target, hit)
+            except:
+                pass
+        docs.append(hit)
+        print(hit)
+        """
+        print("http://primo.kobv.de/primo_library/libweb/action/display.do"
+            +re.search(r'\?tabs.*',str(link)).group(0))
     """
-    print("http://primo.kobv.de/primo_library/libweb/action/display.do"
-        +re.search(r'\?tabs.*',str(link)).group(0))
-"""
