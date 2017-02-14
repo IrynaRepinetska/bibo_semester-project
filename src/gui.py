@@ -12,7 +12,7 @@ window.configure(background='white')
 
 
 scroll = tk.Scrollbar(window)
-verlauf = tk.Text(window, height=40, width=tk.maximize)
+verlauf = tk.Text(window, height=40, width=150)
 scroll.pack(side=tk.RIGHT, fill=tk.Y)
 verlauf.pack(side=tk.TOP, fill=tk.Y)
 scroll.config(command=verlauf.yview)
