@@ -25,8 +25,7 @@ def build_keyword(term, opt, field):
         if len(opt)==3:
             if opt[1] == 'exact' or opt[1] == 'contains':
                 search = '&vl(1UI0)=' + opt[1] + search
-                search = '&vl(123424466UI0)=' + opt[2] + search
-            else:
+                search = '&vl(123424466UI0)=' + opt[2] + search else:
                 search = '&vl(1UI0)=' + opt[2] + search
                 search = '&vl(123424466UI0)=' + opt[1] + search
 
@@ -79,30 +78,28 @@ def build_url(request, time=None, material=None, lang=None):
     """
 
 
-functions =[crawl.author, crawl.publ, crawl.year, crawl.forma, crawl.ids, crawl.desc, crawl.connect, crawl.lang, crawl.rvk, crawl.source,crawl.author2, crawl.publ2, crawl.year2, crawl.forma2, crawl.ids2, crawl.desc2, crawl.connect2, crawl.lang2, crawl.rvk2, crawl.source2]
-function_place=[crawl.bib]
-if __name__ == "__main__":
+#if __name__ == "__main__":
+def crawler(request):
+    functions =[crawl.author, crawl.publ, crawl.year, crawl.forma, crawl.ids, crawl.desc, crawl.connect, crawl.lang, crawl.rvk, crawl.source,crawl.author2, crawl.publ2, crawl.year2, crawl.forma2, crawl.ids2, crawl.desc2, crawl.connect2, crawl.lang2, crawl.rvk2, crawl.source2]
+    function_place=[crawl.bib]
     base = "http://hu-berlin.hosted.exlibrisgroup.com/primo_library/libweb/action/"
-    #key = raw_input("Keyword: ")
-    key = "xml"
-    request={'any':key}
     html = ul.urlopen(build_url(request))
     soup = Bsoup(html, 'lxml')
     docs=[]
     result_counter = 0
-    for result_tab in soup.find_all('ul', {'class':'EXLResultTabs'})[0:6]:
+    for result_tab in soup.find_all('ul', {'class':'EXLResultTabs'})[0:3]:
         hit={}
         co = ""
         try:
             detail_link = base + result_tab.find(id="exlidResult"+ str(result_counter)  +"-detailsTabLink")['href']
         except Exception as e:
-            print "try no.1: "+ str(e)
+            #print "try no.1: "+ str(e)
             result_counter +=1
         try:
             place_link = base + result_tab.find(title="Bestand - "+ str(result_counter))['href']
         except Exception as e:
-            print 'place link error'
-        """
+            #print 'place link error'
+            pass
         try:
             req = ul.urlopen(detail_link).read()
             while 'Was ist neu' in req:
@@ -116,14 +113,18 @@ if __name__ == "__main__":
             docs.append(hit)
         except Exception as e:
             result_counter +=1
-            print str(e)
-        """
+            #print str(e)
         try:
             req = ul.urlopen(place_link).read()
             while 'Was ist neu' in req:
                 req = ul.urlopen(place_link).read()
             d_target =Bsoup(req, 'lxml')
-            #print d_target
+            place_link = d_target.iframe['src']
+
+            req = ul.urlopen(place_link).read()
+            while 'Was ist neu' in req:
+                req = ul.urlopen(place_link).read()
+            d_target =Bsoup(req, 'lxml')
             for func in function_place:
                 try:
                     func(d_target, hit)
@@ -133,5 +134,5 @@ if __name__ == "__main__":
             docs.append(hit)
         except Exception as e:
             result_counter +=1
-            print str(e)
-        print hit
+            #print str(e)
+    return docs

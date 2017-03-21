@@ -1,5 +1,7 @@
 #!/usr/bin/python2
 # coding: utf8
+def title(target, hit):
+    hit['title']    = target.find("h1",{"class":"EXLResultTitle"}).contents[0]
 def author(target, hit):
     hit['author']   = target.find("li",{"id":"Autor-1"}).find('a').contents[0]
 def publ(target, hit):
@@ -43,5 +45,7 @@ def source2(target, hit):
     hit['source']   = target.find("li", {"id":"Quelle1"}).find('span').contents[0]
 
 def bib(target, hit):
-    hit['bib']      = target.find("li", {"class":"width60"}).find('span').contents[0]
-    print target.find("li", {"class":"width60"}).find('span')
+    li = target.find_all("li", {"class":"width60"})
+    span = li[0].find_all('span')
+    hit['shelf']    = span[1].contents[0] + " " + span[0].contents[0]
+    hit['shelf']    = hit['shelf'].strip('\t\n').replace(u"\xa0","")
