@@ -1,9 +1,21 @@
 #!/usr/bin/python2
 # coding: utf8
 def title(target, hit):
-    hit['title']    = target.find("h1",{"class":"EXLResultTitle"}).contents[0]
-def author(target, hit):
-    hit['author']   = target.find("li",{"id":"Autor-1"}).find('a').contents[0]
+    title = ""
+    for n in target.find("h1",{"class":"EXLResultTitle"}):
+        if "Tag" in str(type(n)):
+            title += n.contents[0]
+        else:
+           title += n
+    hit['title']    = title
+def creator(target, hit):
+    author = ""
+    for i in target.find("li",{"id":"Autor-1"}).find('a').contents:
+        if "Tag" in str(type(i)):
+            author += i.contents[0]
+        else:
+           author += i
+    hit['creator'] = author
 def publ(target, hit):
     hit['publ']     = target.find("li", {"id":"Verlag-1"}).find('span').contents[0]
 def year(target, hit):
@@ -23,8 +35,8 @@ def rvk(target, hit):
 def source(target, hit):
     hit['source']   = target.find("li", {"id":"Quelle-1"}).find('span').contents[0]
 
-def author2(target, hit):
-    hit['author']   = target.find("li",{"id":"Autor1"}).find('a').contents[0]
+def creator2(target, hit):
+    hit['creator']   = target.find("li",{"id":"Autor1"}).find('a').contents[0]
 def publ2(target, hit):
     hit['publ']     = target.find("li", {"id":"Verlag1"}).find('span').contents[0]
 def year2(target, hit):
@@ -47,5 +59,5 @@ def source2(target, hit):
 def bib(target, hit):
     li = target.find_all("li", {"class":"width60"})
     span = li[0].find_all('span')
-    hit['shelf']    = span[1].contents[0] + " " + span[0].contents[0]
-    hit['shelf']    = hit['shelf'].strip('\t\n').replace(u"\xa0","")
+    hit['shelf']    = li[1].contents[0] + " im Regal " + span[1].contents[0] + " Gebäude " + span[0].contents[0]
+    hit['shelf']    = hit['shelf'].replace('\t',"").replace('\n','').replace(u"\xa0","")

@@ -6,39 +6,9 @@ import url
 
 
 def finder(request):
+    print request
     result_list = url.crawler(request)
     print result_list
-    """
-    db = [{'title': 'Beginning XML','author': 'Joe Fawcett ; Liam Quin ; Danny Ayers','publisher': 'Indianapolis, Ind. : Wiley : Indianapolis, Ind. : Wiley','year': '2012','desc': 'Verantwortlichkeit: Joe Fawcett ; Liam R. E. Quin ; Danny Ayers ','lang': 'Englisch', 'shelf': 'ST 250 X70','status': 'Exemplar ist am Standort', 'location': 'ZwB Naturwissenschaften'},
-            {'title': 'HTML : kompakt, komplett, kompetent','author': ' Alexandra Brodmüller-Schmitz; Alexandra Brodmüller- Schmitz','publisher': 'Muenchen : Markt+Technik-Verl. : Muenchen : Markt+Technik-Verl. ','year': '2002','desc': 'Verantwortlichkeit: Alexandra Brodmüller-Schmitz ','lang': 'Deutsch', 'shelf': 'ST 250 H85 B864','status':'Exemplar ist am Standort' , 'location': 'ZwB Naturwissenschaften'},
-           {'title': 'CSS : das umfassende Handbuch','author':' Kai. Laborenz' ,'publisher': 'Bonn : Rheinwerk ','year': '2016','desc': 'Verantwortlichkeit: Kai Laborenz','lang': '', 'shelf': 'ST 250 H85 L123 C9(3)','status':'Exemplar ist am Standort '},
-            {'title': 'Datenbanken  Praxis, Methode und mathematische Darstellung','author': 'Theo Lutz','publisher': 'Stuttgart [u.a.] : Science Research Assoc. : Stuttgart [u.a.] : Science Research Assoc. ','year': '1976','desc': 'Verantwortlichkeit: Theo Lutz','lang': 'Deutsch', 'shelf': '','status': ''},
-            {'title': 'XML.com','author': '','publisher': 'San Francisco, Calif. : OReilly Network : San Francisco, Calif. ','year': '1994','desc': 'Online-Ressource','lang': 'Englisch', 'shelf': '','status': ''},
-            {'title': 'XML : Schritt für Schritt. XML - step by step','author': 'Michael J. Young;Michael Young;Marc Young','publisher': 'Unterschleißheim : Microsoft Press : Unterschleißheim : Microsoft Press','year': '2002','desc':  'Verantwortlichkeit: Michael J. Young','lang': 'Deutsch', 'shelf': '','status': ''},
-            {'title': '','author': '','publisher':'' ,'year':'' ,'desc':'' ,'lang': '', 'shelf':'' ,'status':'' }]
-    """
-    """
-    result_list = []
-    for key, value in request.iteritems():
-        if key == 'any':
-            for book in db:
-                for db_value in book.values():
-                    try:
-                        if value.lower() in db_value.lower():
-                            if book not in result_list:
-                                result_list.append(book)
-                    except:
-                        pass
-        else:
-            for book in db:
-                try:
-                    if value.lower() in book[key].lower():
-                        if book not in result_list:
-                            result_list.append(book)
-                except:
-                    pass
-
-    """
     global a
     global limitb
     global count
@@ -72,7 +42,7 @@ def print_nice(book_list):
             print(str(count)+'--------------------------------------------------------------------------\n')
             count += 1
             print('Titel: ' + book.get('title', 'Nicht vorhanden!')+ '\n')
-            print('Autor: ' + book.get('author', 'Nicht vorhanden!')+ '\n')
+            print('Autor: ' + book.get('creator', 'Nicht vorhanden!')+ '\n')
             print('Inhalt: ' + book.get('desc', 'Nicht vorhanden!')+ '\n')
             print('Sprache: ' + book.get('lang', 'Nicht vorhanden!')+ '\n')
             print('Veröffentlichung: ' + book.get('year', 'Nicht vorhanden!')+ '\n')
@@ -161,7 +131,7 @@ while True:
                     if message !="nO":
                         if message !="NO":
                             author = message
-                            req['author'] = author
+                            req['creator'] = author
 
         if bot_response_before == "I also would like to know who the author of this book is. If you do not recall it, please type NO.":
             if message !="no":
@@ -169,7 +139,7 @@ while True:
                     if message !="nO":
                         if message !="NO":
                             author = message
-                            req['author'] = author
+                            req['creator'] = author
 
         if bot_response_before == "If you know the author of the book, please share it with me. Otherwise, just type NO.":
             if message !="no":
@@ -177,7 +147,7 @@ while True:
                     if message !="nO":
                         if message !="NO":
                             author = message
-                            req['author'] = author
+                            req['creator'] = author
 #keyword
         if bot_response_before == "Alright, what does this book should be about?":
             keyword = message
@@ -201,7 +171,7 @@ while True:
 #publisher
         if bot_response_before == "Alright, type me now a name of a publisher please.":
             publisher = message
-            req['publisher'] = publisher
+            req['lsr48'] = publisher
 
 
 #year
