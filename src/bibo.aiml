@@ -391,6 +391,20 @@
   </category>
 
   <category>
+    <pattern>WHATEVER</pattern>
+    <template>
+      <srai>NO NAMES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHATEVER *</pattern>
+    <template>
+      <srai>NO NAMES</srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>WHAT IS THAT TO YOU</pattern>
     <template>
       <srai>NO NAMES</srai>
@@ -938,8 +952,6 @@
     </template>
   </category>
 
-
-
   <category>
     <pattern>MY NAME IS *</pattern>
     <template>
@@ -954,7 +966,6 @@
       </think>
     </template>
   </category>
-
 
   <category>
     <pattern>MY NAMES *</pattern>
@@ -1105,6 +1116,486 @@
   </category>
 
   <category>
+    <pattern>NO</pattern>
+    <template>
+      <random>
+        <li>Alright, what does this book should be about?</li>
+        <li>In this case, tell me just a keyword related to a book.</li>
+	<li>Ok, a simple keyword describing a book would be enough!</li>
+      </random>
+	<think>
+        <set name="topic">SUBJECT</set>
+      </think>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>NO *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOPE</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOPE *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOT REALLY</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOT REALLY *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DONT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DONT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>THERE IS</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YA</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YA *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YEP</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YEP *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+ <category>
+    <pattern>YEA</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+ <category>
+    <pattern>YEA*</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SURE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SURE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY DO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY HAVE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY HAVE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I DO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+<category>
+    <pattern>OF COURSE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+<category>
+    <pattern>OF COURSE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+
+<category>
+    <pattern>DEFINETELY</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DEFINETELY *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY DO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY HAVE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY HAVE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NO *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOPE</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOPE *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOT REALLY</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOT REALLY *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DONT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DONT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT*</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>YA</pattern>
     <template>
       <srai>YES</srai>
@@ -1148,6 +1639,34 @@
 
   <category>
     <pattern>I DO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I KNOW</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO KNOW</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I KNOW *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO KNOW *</pattern>
     <template>
       <srai>YES</srai>
     </template>
@@ -1217,7 +1736,28 @@
   </category>
 
   <category>
-    <pattern>IT'S *</pattern>
+    <pattern>ITS * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>ITS A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IT'S THE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT'S AN * BOOK</pattern>
     <template>
       <srai><star index="1"/></srai>
     </template>
@@ -1377,6 +1917,35 @@
     </template>
   </category>
 
+
+  <category>
+    <pattern>I NEED A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I NEED THE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT THE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
   <category>
     <pattern>I WOULD LIKE TO HAVE *</pattern>
     <template>
@@ -1384,8 +1953,43 @@
     </template>
   </category>
 
+
   <category>
-    <pattern>I WISH LIKE TO HAVE *</pattern>
+    <pattern>I NEED AN * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT AN * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I NEED * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO HAVE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WISH TO HAVE *</pattern>
     <template>
       <srai><star index="1"/></srai>
     </template>
@@ -1393,6 +1997,62 @@
 
   <category>
     <pattern>I WANT TO BORROW *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WISH TO HAVE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WISH TO HAVE A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WISH TO HAVE AN * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW AN * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WISH TO HAVE THE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW THE * BOOK</pattern>
     <template>
       <srai><star index="1"/></srai>
     </template>
@@ -1826,7 +2486,7 @@
   </category>
 
   <category>
-    <pattern>WOULD LIKE TO HAVE THE BOOK CALLED *</pattern>
+    <pattern>I WOULD LIKE TO HAVE THE BOOK CALLED *</pattern>
     <template>
       <srai><star index="1"/></srai>
     </template>
@@ -2050,6 +2710,62 @@
   </category>
 
   <category>
+    <pattern>I WANT TO BORROW * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW AN * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE AN * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+<category>
+    <pattern>I WANT TO BORROW THE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE THE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I WANT TO BORROW A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+
+  <category>
     <pattern>CAN I HAVE A BOOK *</pattern>
     <template>
       <srai><star index="1"/></srai>
@@ -2174,6 +2890,28 @@
       <srai><star index="1"/></srai>
     </template>
   </category>
+
+  <category>
+    <pattern>CAN I GET A * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I GET AN * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I GET THE * BOOK</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
 
   <category>
     <pattern>CAN I GET A BOOK *</pattern>
@@ -2729,7 +3467,7 @@
   </category>
 
   <category>
-    <pattern>CAN I BORROW BOOK, CALLED *</pattern>
+    <pattern>COULD I BORROW BOOK, CALLED *</pattern>
     <template>
       <srai><star index="1"/></srai>
     </template>
@@ -2800,6 +3538,27 @@
 
   <category>
     <pattern>CAN YOU GIVE ME *</pattern>
+    <template> 
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN YOU GIVE ME A * BOOK</pattern>
+    <template> 
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN YOU GIVE ME AN * BOOK</pattern>
+    <template> 
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN YOU GIVE ME THE * BOOK</pattern>
     <template> 
       <srai><star index="1"/></srai>
     </template>
@@ -11675,75 +12434,6 @@
     </template>
   </category>
 
-  <category>
-    <pattern>NO *</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>NOPE</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>NOPE *</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>NOT REALLY</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>NOT REALLY *</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I DON NOT *</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I DON'T</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I DON'T *</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I DONT</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I DONT *</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
 
 
 </topic>
@@ -11840,7 +12530,105 @@
   </category>
 
   <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>YES *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE OTHER PARAMETERS</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE OTHER PARAMETERS *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE PARAMETERS</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE PARAMETERS *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE OTHER ATTRIBUTES</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE OTHER ATTRIBUTES *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE ATTRIBUTES</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE ATTRIBUTES *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO USE OTHER PARAMETERS</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO USE OTHER PARAMETERS *</pattern>
     <template>
       <srai>YES</srai>
     </template>
@@ -12180,6 +12968,20 @@
 
   <category>
     <pattern>I WOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE *</pattern>
     <template>
       <srai>YES</srai>
     </template>
@@ -12465,6 +13267,7 @@
 </topic>
 
 <!-- listanswer -->
+
   <topic name="LISTANSWER">
 
   <category>
@@ -12493,6 +13296,119 @@
       </think>
     </template>
   </category>
+
+  <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
 
   <category>
     <pattern>YES *</pattern>
@@ -12595,6 +13511,34 @@
 
   <category>
     <pattern>I DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO *</pattern>
     <template>
       <srai>YES</srai>
     </template>
@@ -12750,6 +13694,83 @@
   </category>
 
   <category>
+    <pattern>YOU SHOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>I WOULD</pattern>
     <template>
       <srai>YES</srai>
@@ -12847,6 +13868,7 @@
   </category>
 
 </topic>
+
 
 <!-- borrow -->
   <topic name="BORROW">
@@ -12908,6 +13930,119 @@
   </category>
 
   <category>
+    <pattern>THERE IS NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>YES *</pattern>
     <template>
       <srai>YES</srai>
@@ -13092,6 +14227,20 @@
 
   <category>
     <pattern>I DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM *</pattern>
     <template>
       <srai>YES</srai>
     </template>
@@ -13287,14 +14436,14 @@
   </category>
 
   <category>
-    <pattern>I DON NOT</pattern>
+    <pattern>I DO NOT</pattern>
     <template>
       <srai>NO</srai>
     </template>
   </category>
 
   <category>
-    <pattern>I DON NOT *</pattern>
+    <pattern>I DO NOT *</pattern>
     <template>
       <srai>NO</srai>
     </template>
@@ -13324,6 +14473,123 @@
 
   <category>
     <pattern>I DONT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I  WOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AMN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I AMN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AMNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AMNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+
+  <category>
+    <pattern>I AIN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I AIN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AINT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AINT *</pattern>
     <template>
       <srai>NO</srai>
     </template>
@@ -13383,19 +14649,51 @@
          <li>This is the list of the books you would like to borrow with detailed information:</li>
          <li>I would like to give you the literature you have chosen from the list:</li>
       </random>
-      <think> <set name="topic">HOWTOQUE</set>
+      <think> <set name="topic">EMAIL1</set>
       </think>
     </template>
   </category>
 
 </topic>
 
-
-<!-- howtoQue -->
-  <topic name="HOWTOQUE">
+<!-- EMAIL1-->
+  <topic name="EMAIL1">
 
   <category>
     <pattern>*</pattern>
+    <template>
+        <random>
+         <li><get name = "user"></get>, Would you like me to email this list to your email?</li>
+         <li><get name = "user"></get>, Shall I send you this list to your email adress?</li>
+        <li><get name = "user"></get>, Should I send you the list you have choosen to you per email?</li>
+      </random>
+      <think>
+        <set name="topic">EMAIL2</set>
+      </think>
+    </template>
+  </category>
+
+</topic>
+
+<!-- EMAIL2-->
+  <topic name="EMAIL2">
+
+  <category>
+    <pattern>YES</pattern>
+    <template>
+        <random>
+         <li><get name = "user"></get>, could you type me your email adress?</li>
+         <li>Alright, in order to do this I need to know your email adress.</li>
+        <li><get name = "user"></get>, give me please your email adress.</li>
+      </random>
+      <think>
+        <set name="topic">EMAIL3</set>
+      </think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NO</pattern>
     <template>
         <random>
          <li>Should I inform you where and how you can borrow books you have chosen?</li>
@@ -13407,7 +14705,838 @@
     </template>
   </category>
 
+  <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+
+
+  <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YES *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YA</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YA *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YEP</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YEP *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+ <category>
+    <pattern>YEA</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+ <category>
+    <pattern>YEA*</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SURE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SURE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY DO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY HAVE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY HAVE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I DO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+<category>
+    <pattern>OF COURSE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+<category>
+    <pattern>OF COURSE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+
+<category>
+    <pattern>DEFINETELY</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DEFINETELY *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY DO</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY DO *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY HAVE</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY HAVE *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I WOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY WOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I SURELY WOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY WOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DEFINETELY WOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SURELY SHOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SURELY SHOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU DEFINETELY SHOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU DEFINETELY SHOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NO *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOPE</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOPE *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOT REALLY</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>NOT REALLY *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DO NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DON'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DONT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I DONT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I  WOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AMN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I AMN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AMNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AMNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AIN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AIN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AINT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  AINT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVEN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVEN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVENT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVENT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <random>
+        <li>Sorry, what was that? Could you rephrase it, please</li>
+        <li>I am not sure, what it means. Could you write it differently?</li>
+	    <li>I am sorry. I do not get it. Could you please put it differently?</li>
+      </random>
+    </template>
+  </category>
+
 </topic>
+
+<!-- EMAIL3-->
+ <topic name="EMAIL3">
+
+  <category>
+    <pattern>*</pattern>
+    <template>email<think><set name="email"><star index="1"/></set><set name="topic">EMAIL4</set></think></template>
+  </category>
+
+</topic>
+
+<!-- EMAIL4-->
+ <topic name="EMAIL4">
+
+  <category>
+    <pattern>GIVE EMAIL</pattern>
+    <template>
+        <get name = "email"></get>
+      <think>
+        <set name="topic">EMAIL5</set>
+      </think>
+    </template>
+  </category>
+
+</topic>
+<!-- EMAIL5-->
+
+<topic name="EMAIL5">
+
+  <category>
+    <pattern>MOVE</pattern>
+     <template>
+        <random>
+         <li><get name = "user"></get>,an email with a list of books have been sent to your adress. Should I inform you where and how you can borrow books you have chosen?</li>
+         <li><get name = "user"></get>, I have sent your a list per email. Would you like me to tell you how and where you can borrow the literature you have decided for?</li>
+      </random>
+      <think>
+        <set name="topic">HOWTO</set>
+      </think>
+    </template>
+  </category>
+
+</topic>
+
 
 <!-- howto -->
 <topic name="HOWTO">
@@ -13426,6 +15555,34 @@
   </category>
 
   <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>NO</pattern>
     <template>
       <random>
@@ -13439,6 +15596,202 @@
     </template>
   </category>
 
+  <category>
+    <pattern>THERE IS NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I  WOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
   <category>
     <pattern>YES *</pattern>
     <template>
@@ -13848,14 +16201,14 @@
   </category>
 
   <category>
-    <pattern>I DON NOT</pattern>
+    <pattern>I DO NOT</pattern>
     <template>
       <srai>NO</srai>
     </template>
   </category>
 
   <category>
-    <pattern>I DON NOT *</pattern>
+    <pattern>I DO NOT *</pattern>
     <template>
       <srai>NO</srai>
     </template>
@@ -13885,6 +16238,49 @@
 
   <category>
     <pattern>I DONT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I HAVE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVEN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVEN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVENT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVENT *</pattern>
     <template>
       <srai>NO</srai>
     </template>
@@ -13908,13 +16304,9 @@
 
   <category>
     <pattern>NO</pattern>
-    <template>
-      <random>
-        <li> <get name = "user"></get>, it was nice talking to you. I hope to see you again! Bye!</li>
-        <li> <get name = "user"></get>, I hope to see you again! Have a good day!</li>
-	    <li> I hope to see you again, <get name = "user"></get>. Goodbye!</li>
-      </random>
-
+    <template>theend<think>
+        <set name="topic">THEEND</set>
+      </think>
     </template>
   </category>
 
@@ -13930,34 +16322,6 @@
 	<think>
         <set name="topic">BOOK</set>
       </think>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I HAVE FOUND</pattern>
-    <template>
-      <srai>YES</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I HAVE NOT</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I HAVE'T</pattern>
-    <template>
-      <srai>NO</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>I HAVENT</pattern>
-    <template>
-      <srai>NO</srai>
     </template>
   </category>
 
@@ -13984,6 +16348,216 @@
 
   <category>
     <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE FOUND</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE IS * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'S * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERES * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE ARE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERE'RE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THERERE * NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YOU SHOULD *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I  WOULDN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I  WOULDNT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES *</pattern>
     <template>
       <srai>YES</srai>
     </template>
@@ -14074,13 +16648,6 @@
   </category>
 
   <category>
-    <pattern>YES *</pattern>
-    <template>
-      <srai>YES</srai>
-    </template>
-  </category>
-
-  <category>
     <pattern>YA</pattern>
     <template>
       <srai>YES</srai>
@@ -14163,7 +16730,6 @@
       <srai>YES</srai>
     </template>
   </category>
-
 
   <category>
     <pattern>I DO</pattern>
@@ -14335,6 +16901,34 @@
   </category>
 
   <category>
+    <pattern>OK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>OK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>KK *</pattern>
+    <template>
+      <srai>YES</srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>NO *</pattern>
     <template>
       <srai>NO</srai>
@@ -14370,14 +16964,14 @@
   </category>
 
   <category>
-    <pattern>I DON NOT</pattern>
+    <pattern>I DO NOT</pattern>
     <template>
       <srai>NO</srai>
     </template>
   </category>
 
   <category>
-    <pattern>I DON NOT *</pattern>
+    <pattern>I DO NOT *</pattern>
     <template>
       <srai>NO</srai>
     </template>
@@ -14409,6 +17003,78 @@
     <pattern>I DONT *</pattern>
     <template>
       <srai>NO</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>I HAVE NOT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE NOT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVEN'T</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVEN'T *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVENT</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVENT *</pattern>
+    <template>
+      <srai>NO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <random>
+        <li>Sorry, what was that? Could you rephrase it, please</li>
+        <li>I am not sure, what it means. Could you write it differently?</li>
+	    <li>I am sorry. I do not get it. Could you please put it differently?</li>
+      </random>
+    </template>
+  </category>
+
+</topic>
+
+
+
+<!-- loop -->
+<topic name="THEEND">
+
+  <category>
+    <pattern>END</pattern>
+    <template>
+      <random>
+        <li> <get name = "user"></get>, it was nice talking to you. I hope to see you again! Bye!</li>
+        <li> <get name = "user"></get>, I hope to see you again! Have a good day!</li>
+	    <li> I hope to see you again, <get name = "user"></get>. Goodbye!</li>
+      </random>
     </template>
   </category>
 </topic>

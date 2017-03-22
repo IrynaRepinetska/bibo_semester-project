@@ -33,7 +33,6 @@ def build_url(request, time=None, material=None, lang=None):
         else:
             url = url + build_keyword(request[term],term,field_num)
         field_num += 1
-    print url+tail
     return url+tail
     
 

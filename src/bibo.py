@@ -6,14 +6,11 @@ import url
 
 
 def finder(request):
-    print request
     result_list = url.crawler(request)
-    print result_list
     global a
     global limitb
     global count
     global leihe
-    global req
     global thing
     thing = False
     req={}
@@ -52,7 +49,7 @@ def print_nice(book_list):
 def print_leihe(book_list):
     if len(book_list) != 0:
         for book in book_list:
-            print(str(count)+'--------------------------------------------------------------------------\n')
+            print('---------------------------------------------------------------------------\n')
             print('Titel: ' + book.get('title', 'Nicht vorhanden!')+ '\n')
             print('Autor: ' + book.get('author', 'Nicht vorhanden!')+ '\n')
             print('Inhalt: ' + book.get('desc', 'Nicht vorhanden!')+ '\n')
@@ -61,17 +58,26 @@ def print_leihe(book_list):
             print('Status: ' + book.get('status', 'Nicht vorhanden!') + ' ' + book.get('location', 'Nicht Vorhanden!') + ' im Regal ' + book.get('shelf','Nicht vorhanden!')+ '\n')
             print('---------------------------------------------------------------------------'+ '\n')
 
-
-
-
-
-
-
+def email_string(book_list):
+    email = ""
+    if len(book_list) != 0:
+        for book in book_list:
+            email+= '------------------------------------------------------------------------\n'
+            email+='Titel: ' + book.get('title', 'Nicht vorhanden!')+ '\n'
+            email+='Autor: ' + book.get('author', 'Nicht vorhanden!')+ '\n'
+            email+='Inhalt: ' + book.get('desc', 'Nicht vorhanden!')+ '\n'
+            email+='Sprache: ' + book.get('lang', 'Nicht vorhanden!')+ '\n'
+            email+='Veröffentlichung: ' + book.get('year', 'Nicht vorhanden!')+ '\n'
+            email+='Status: ' + book.get('status', 'Nicht vorhanden!') + ' ' + book.get('location', 'Nicht Vorhanden!') + ' im Regal ' + book.get('shelf','Nicht vorhanden!')+ '\n'
+            email+='------------------------------------------------------------------------'+ '\n'
+    return email
 
 mybot = aiml.Kernel()
 mybot.learn("std-startup.xml")
 mybot.respond("load aiml bibo")
 bot_response_before = ""
+
+print("You have started a program called Bibo. Bibo can be your best helper in finding literature in the HU library. If you want to stop talking to Bibo, just type QUIT. Enjoy!" + '\n')
 
 message = "start"
 bot_response = mybot.respond(message)
@@ -99,8 +105,39 @@ while True:
             else:
                 bot_response = mybot.respond('not empty')
 
+#the end of the conversation
+        if bot_response == "theend":
+            message = "end"
+            bot_response = mybot.respond(message)
+            print(bot_response + '\n')
+            exit()
+#email abfragen and die liste per email verschicken
+        if bot_response == "email":
+            message = "give email"
+            bot_response = mybot.respond(message)
+            email = bot_response
+#in the variable email is saved an email adress of a user.. here should the list of books be sent to an email
+            fromaddr = "bibothefriendliest@gmail.com"
+            toaddr = email
+            msg = MIMEMultipart()
+            msg['From'] = fromaddr
+            msg['To'] = toaddr
+            msg['Subject'] = "test email"
 
-#title directly      
+            body = email_string(leihe)
+            msg.attach(MIMEText(body, 'plain'))
+
+            server = smtplib.SMTP('smtp.gmail.com:587')
+            server.ehlo()
+            server.starttls()
+            server.login(fromaddr, "hmxymxiugtzsnptt")
+            text = msg.as_string()
+            server.sendmail(fromaddr, toaddr, text)
+            server.quit()
+            message = "move"
+            bot_response = mybot.respond(message)
+
+#title directly
         if bot_response == "title":
             message = "get title"
             title= mybot.respond(message)
@@ -112,27 +149,22 @@ while True:
         print(bot_response)
 
 #title	
-        if bot_response_before == "Great! I will find it for you in no time. But I need to know the name of the book.":
+        if bot_response_before == "Ok, in order to find it, I need to know its name." or bot_response_before == "In this case, I will check if we have it. Tell me please its name." or bot_response_before == "Great! I will find it for you in no time. But I need to know the name of the book.":
             title = message
             req = {'title': title}
-
+        """
         if bot_response_before == "In this case, I will check if we have it. Tell me please its name.":
             title = message
-            req = {'title': title}
 
         if bot_response_before == "Ok, in order to find it, I need to know its name.":
             title = message
             req = {'title': title}
-
+        """
 #author
-        if bot_response_before == "The author's name would be helpful as well. If you do not remember it, just say NO.":
-            if message !="no":
-                if message !="No":
-                    if message !="nO":
-                        if message !="NO":
-                            author = message
-                            req['creator'] = author
-
+        if bot_response_before == "If you know the author of the book, please share it with me. Otherwise, just type NO." or bot_response_before == "I also would like to know who the author of this book is. If you do not recall it, please type NO." or bot_response_before == "The author's name would be helpful as well. If you do not remember it, just say NO.":
+            if message !="no" or message !="No" or message !="nO" or message !="NO":
+                req['creator'] = message
+        """
         if bot_response_before == "I also would like to know who the author of this book is. If you do not recall it, please type NO.":
             if message !="no":
                 if message !="No":
@@ -148,12 +180,13 @@ while True:
                         if message !="NO":
                             author = message
                             req['creator'] = author
+        """
 #keyword
-        if bot_response_before == "Alright, what does this book should be about?":
+        if bot_response_before == "Ok, a simple keyword describing a book would be enough!" or bot_response_before == "In this case, tell me just a keyword related to a book." or bot_response_before == "Alright, what does this book should be about?":
             keyword = message
             req = {'any': keyword}
 
-
+        """
         if bot_response_before == "In this case, tell me just a keyword related to a book.":
             keyword = message
             req = {'any': keyword}
@@ -161,7 +194,7 @@ while True:
         if bot_response_before == "Ok, a simple keyword describing a book would be enough!":
             keyword = message
             req = {'any': keyword}
-
+        """
 
 #co-author
         if bot_response_before == "Now tell me, who the co-author actually is.":
@@ -197,11 +230,10 @@ while True:
 
 #answers ..
 
-
 # a != 0 bedeutet, dass es sinnvoll ist der Benuter zu fragen. ob er noch weitere Buecher in der Liste sehen moechte. dh weitere Buecher mueossen in der Liste anwesen sein
         global a
         global result
-        if bot_response == "I have found the following books that are related to your keyword:":
+        if bot_response == "Guess what! I have already found information for you:" or bot_response == "I have already found something for you:" or bot_response == "Alright, this is what I have found for you:" or bot_response == "I have already found an answer on you query!" or bot_response == "The result of your search is:" or bot_response == "Guess what! I have already found something for you:" or bot_response == "This is everything that I have found for you based on the keyword you have provided:" or bot_response == "Smartie, there is a list of the literature that may interest you based on the keyword you have given:" or bot_response == "I have found the following books that are related to your keyword:":
             result = finder(req)
             if a == 0:
                 message = "end2"
@@ -211,7 +243,7 @@ while True:
             print_nice(result)
             print(bot_response+ '\n')
             req.clear()
-
+        """
         if bot_response == "Smartie, there is a list of the literature that may interest you based on the keyword you have given:":
             result = finder(req)
             if a == 0:
@@ -299,9 +331,9 @@ while True:
             print_nice(result)
             print(bot_response+ '\n')
             req.clear()
-
+        """
 #die liste weiter ausgeben
-        if bot_response == "As you asked:":
+        if bot_response == "Here it goes:" or bot_response == "As you asked:":
             #hier liste auszugeben
             if a == 0:
                 message2 = "Wait a second..I have showen you already all the books..Sorry, my mistake!"
@@ -312,7 +344,7 @@ while True:
             print_nice(result)
             bot_response = mybot.respond(message)
             print(bot_response + '\n')
-
+        """
         if bot_response == "Here it goes:":
             #hier liste auszugeben
             if a == 0:
@@ -324,20 +356,20 @@ while True:
             print_nice(result)
             bot_response = mybot.respond(message)
             print(bot_response + '\n')
-
+        """
 
 
 
 #books to borrow are printed out
 
-        if bot_response== "This is the list of the books you would like to borrow with detailed information:":
+        if bot_response== "I would like to give you the literature you have chosen from the list:" or bot_response== "This is the list of the books you would like to borrow with detailed information:":
             if thing:
                 leihe = result
             print_leihe(leihe)
             message = "move"
             bot_response = mybot.respond(message)
             print(bot_response+ '\n')
-
+        """
         if bot_response== "I would like to give you the literature you have chosen from the list:":
             if thing:
                 leihe = result
@@ -345,7 +377,7 @@ while True:
             message = "move"
             bot_response = mybot.respond(message)
             print(bot_response+ '\n')
-
+        """
 #the list with the choosen books to print..numbers should be collected in three if statements above
                                    
         bot_response_before = bot_response
