@@ -45,7 +45,7 @@ def crawler(request):
     soup = Bsoup(html, 'lxml')
     docs=[]
     result_counter = 0
-    for result_tab in soup.find_all('ul', {'class':'EXLResultTabs'})[0:6]:
+    for result_tab in soup.find_all('ul', {'class':'EXLResultTabs'})[0:11]:
         hit={}
         co = ""
         try:
