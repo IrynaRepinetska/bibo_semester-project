@@ -1729,6 +1729,118 @@
   </category>
 
   <category>
+    <pattern>THIS BOOK IS ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>A BOOK IS ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THE BOOK IS ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>BOOK IS ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THIS BOOK IS ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>A BOOK IS ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THE BOOK IS ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>BOOK IS ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THIS BOOK IS ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>A BOOK IS ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THE BOOK IS ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>BOOK IS ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THIS BOOK IS ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>A BOOK IS ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THE BOOK IS ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>BOOK IS ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
     <pattern>ITS *</pattern>
     <template>
       <srai><star index="1"/></srai>
@@ -1741,7 +1853,6 @@
       <srai><star index="1"/></srai>
     </template>
   </category>
-
 
   <category>
     <pattern>ITS A * BOOK</pattern>
@@ -1890,12 +2001,432 @@
   </category>
 
   <category>
-    <pattern>THE BOOK'S NAME IS *</pattern>
+    <pattern>I NEED A BOOK ABOUT *</pattern>
     <template>
       <srai><star index="1"/></srai>
     </template>
   </category>
 
+  <category>
+    <pattern>I WANT A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT IS ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT'S ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ITS ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT IS ABOUT  A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT'S ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ITS ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT IS ABOUT  AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT'S ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ITS ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT IS ABOUT  THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IT'S ABOUT THE  *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ITS ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO HAVE A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I HAVE A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I BORROW A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I BORROW A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN YOU LEND ME A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD YOU LEND ME A BOOK ABOUT *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I NEED A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO HAVE A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I HAVE A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I BORROW A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I BORROW A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN YOU LEND ME A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD YOU LEND ME A BOOK ABOUT A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>THE BOOK'S NAME IS A *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I NEED A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO HAVE A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I HAVE A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I BORROW A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I BORROW A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN YOU LEND ME A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD YOU LEND ME A BOOK ABOUT AN *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I NEED A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WANT TO BORROW A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO HAVE A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I WOULD LIKE TO BORROW A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I HAVE A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I HAVE A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN I BORROW A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD I BORROW A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CAN YOU LEND ME A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>COULD YOU LEND ME A BOOK ABOUT THE *</pattern>
+    <template>
+      <srai><star index="1"/></srai>
+    </template>
+  </category>
+S
   <category>
     <pattern>THE BOOKS NAME IS *</pattern>
     <template>
@@ -15500,20 +16031,9 @@
          <li><get name = "user"></get>, I have sent your a list per email. Would you like me to tell you how and where you can borrow the literature you have decided for?</li>
       </random>
       <think>
-        <set name="topic">DUMMY</set>
+        <set name="topic">HOWTO</set>
       </think>
     </template>
-  </category>
-
-
-</topic>
-
-<!-- DUMMY-->
- <topic name="DUMMY">
-
-  <category>
-    <pattern>*</pattern>
-       <template><think><set name="topic">HOWTO</set></think></template>
   </category>
 
 
