@@ -14610,7 +14610,7 @@
 
 
 <!-- printList-->
-  <topic name="PRINTLIST">
+<topic name="PRINTLIST">
 
   <category>
     <pattern>*</pattern>
@@ -14626,7 +14626,7 @@
 </topic>
 
 <!-- printList-->
-  <topic name="CHECK">
+<topic name="CHECK">
 
   <category>
     <pattern>EMPTY</pattern>
@@ -14657,7 +14657,7 @@
 </topic>
 
 <!-- EMAIL1-->
-  <topic name="EMAIL1">
+ <topic name="EMAIL1">
 
   <category>
     <pattern>*</pattern>
@@ -14676,15 +14676,15 @@
 </topic>
 
 <!-- EMAIL2-->
-  <topic name="EMAIL2">
+<topic name="EMAIL2">
 
   <category>
     <pattern>YES</pattern>
     <template>
         <random>
-         <li><get name = "user"></get>, could you type me your email adress?</li>
+         <li>Could you type me your email adress?</li>
          <li>Alright, in order to do this I need to know your email adress.</li>
-        <li><get name = "user"></get>, give me please your email adress.</li>
+        <li>Give me please your email adress.</li>
       </random>
       <think>
         <set name="topic">EMAIL3</set>
@@ -14732,8 +14732,6 @@
       <srai>YES</srai>
     </template>
   </category>
-
-
 
   <category>
     <pattern>OK</pattern>
@@ -14937,7 +14935,6 @@
       <srai>YES</srai>
     </template>
   </category>
-
 
   <category>
     <pattern>I DO</pattern>
@@ -15261,7 +15258,6 @@
     </template>
   </category>
 
-
   <category>
     <pattern>I  WOULDN'T *</pattern>
     <template>
@@ -15480,7 +15476,6 @@
     </template>
   </category>
 
-
   <category>
     <pattern>*</pattern>
     <template>
@@ -15499,44 +15494,30 @@
 
   <category>
     <pattern>*</pattern>
-    <template>email<think><set name="email"><star index="1"/></set><set name="topic">EMAIL4</set></think></template>
-  </category>
-
-</topic>
-
-<!-- EMAIL4-->
- <topic name="EMAIL4">
-
-  <category>
-    <pattern>GIVE EMAIL</pattern>
-    <template>
-        <get name = "email"></get>
-      <think>
-        <set name="topic">EMAIL5</set>
-      </think>
-    </template>
-  </category>
-
-</topic>
-<!-- EMAIL5-->
-
-<topic name="EMAIL5">
-
-  <category>
-    <pattern>MOVE</pattern>
-     <template>
+       <template>
         <random>
          <li><get name = "user"></get>,an email with a list of books have been sent to your adress. Should I inform you where and how you can borrow books you have chosen?</li>
          <li><get name = "user"></get>, I have sent your a list per email. Would you like me to tell you how and where you can borrow the literature you have decided for?</li>
       </random>
       <think>
-        <set name="topic">HOWTO</set>
+        <set name="topic">DUMMY</set>
       </think>
     </template>
   </category>
 
+
 </topic>
 
+<!-- DUMMY-->
+ <topic name="DUMMY">
+
+  <category>
+    <pattern>*</pattern>
+       <template><think><set name="topic">HOWTO</set></think></template>
+  </category>
+
+
+</topic>
 
 <!-- howto -->
 <topic name="HOWTO">

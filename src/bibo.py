@@ -8,7 +8,7 @@ from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
 
-def finder(request):
+def finder(request): 
     result_list = url.crawler(request)
     global a
     global limitb
@@ -89,12 +89,17 @@ print(bot_response)
 while True:
     message = raw_input("Enter your message to Bibo: ")
     if message == "quit":
-       exit()
+        exit()
     else:
+        if bot_response_before == "Could you type me your email adress?" or bot_response_before == "Alright, in order to do this I need to know your email adress." or bot_response_before == "Give me please your email adress.":
+
+            email = message
+            message = "move"
         bot_response = mybot.respond(message)
 
-#number of the book to borrow are collected hier
 
+
+#number of the book to borrow are collected hier
         global leihe
 
         if bot_response== "check the list":
@@ -115,7 +120,8 @@ while True:
             print(bot_response + '\n')
             exit()
 #email abfragen and die liste per email verschicken
-        if bot_response == "email":
+#        if bot_response == "email":
+        if bot_response_before == "Could you type me your email adress?" or bot_response_before == "Alright,     in order to do this I need to know your email adress." or bot_response_before == "Give me please your email     adress.":
             message = "give email"
             bot_response = mybot.respond(message)
             email = bot_response
